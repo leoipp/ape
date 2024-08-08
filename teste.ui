@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1054</width>
-    <height>504</height>
+    <height>696</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -190,54 +190,6 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="main_button_cadastro">
-            <property name="minimumSize">
-             <size>
-              <width>120</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <family>Poppins ExtraBold</family>
-              <pointsize>10</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>Cadastro</string>
-            </property>
-            <property name="flat">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="main_button_custos">
-            <property name="minimumSize">
-             <size>
-              <width>120</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <family>Poppins ExtraBold</family>
-              <pointsize>10</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>Custos</string>
-            </property>
-            <property name="flat">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QPushButton" name="main_button_resultados">
             <property name="minimumSize">
              <size>
@@ -340,8 +292,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>1048</width>
-                   <height>478</height>
+                   <width>1042</width>
+                   <height>543</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout">
@@ -553,10 +505,10 @@ p, li { white-space: pre-wrap; }
                 <widget class="QWidget" name="scrollAreaWidgetContents_3">
                  <property name="geometry">
                   <rect>
-                   <x>-305</x>
-                   <y>-585</y>
-                   <width>1634</width>
-                   <height>1859</height>
+                   <x>-442</x>
+                   <y>-4060</y>
+                   <width>1654</width>
+                   <height>4586</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -593,6 +545,896 @@ p, li { white-space: pre-wrap; }
                         <property name="spacing">
                          <number>20</number>
                         </property>
+                        <item row="1" column="0">
+                         <widget class="QFrame" name="frame_4">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_5">
+                           <item>
+                            <widget class="QFrame" name="frame_57">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>600</width>
+                               <height>800</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_23">
+                              <item>
+                               <widget class="QFrame" name="frame_13">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_28">
+                                 <item>
+                                  <widget class="QLabel" name="label_110">
+                                   <property name="font">
+                                    <font>
+                                     <family>Poppins SemiBold</family>
+                                     <pointsize>10</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Classes de Inclinação</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <spacer name="horizontalSpacer_11">
+                                   <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                   </property>
+                                   <property name="sizeHint" stdset="0">
+                                    <size>
+                                     <width>40</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                  </spacer>
+                                 </item>
+                                 <item>
+                                  <widget class="QPushButton" name="button_open_5">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>42</width>
+                                     <height>42</height>
+                                    </size>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTableWidget" name="tab_6">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>450</height>
+                                 </size>
+                                </property>
+                                <property name="font">
+                                 <font>
+                                  <family>Poppins SemiBold</family>
+                                  <pointsize>8</pointsize>
+                                  <weight>75</weight>
+                                  <bold>true</bold>
+                                 </font>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Plain</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>10</number>
+                                </property>
+                                <property name="sortingEnabled">
+                                 <bool>true</bool>
+                                </property>
+                                <attribute name="horizontalHeaderDefaultSectionSize">
+                                 <number>150</number>
+                                </attribute>
+                                <attribute name="horizontalHeaderMinimumSectionSize">
+                                 <number>50</number>
+                                </attribute>
+                                <attribute name="verticalHeaderVisible">
+                                 <bool>false</bool>
+                                </attribute>
+                                <attribute name="verticalHeaderDefaultSectionSize">
+                                 <number>80</number>
+                                </attribute>
+                                <attribute name="verticalHeaderMinimumSectionSize">
+                                 <number>40</number>
+                                </attribute>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item row="7" column="0" colspan="3">
+                         <widget class="QFrame" name="frame_11">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QGridLayout" name="gridLayout_4">
+                           <item row="0" column="1" alignment="Qt::AlignRight">
+                            <widget class="QFrame" name="frame_41">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QGridLayout" name="gridLayout_22">
+                              <item row="0" column="0">
+                               <widget class="QFrame" name="frame_44">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QGridLayout" name="gridLayout_21">
+                                 <item row="2" column="0">
+                                  <widget class="QLabel" name="label_28">
+                                   <property name="text">
+                                    <string>Piracicaba:</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="2" column="1">
+                                  <widget class="QLineEdit" name="lineEdit_7"/>
+                                 </item>
+                                 <item row="1" column="1">
+                                  <widget class="QLineEdit" name="lineEdit_8"/>
+                                 </item>
+                                 <item row="1" column="0">
+                                  <widget class="QLabel" name="label_29">
+                                   <property name="text">
+                                    <string>Santa Bárbara:</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="0" column="0" colspan="2">
+                                  <widget class="QLabel" name="label_112">
+                                   <property name="font">
+                                    <font>
+                                     <family>Poppins SemiBold</family>
+                                     <pointsize>10</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Custos de Transporte Ferroviário</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item row="1" column="0">
+                               <widget class="QFrame" name="frame_27">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QGridLayout" name="gridLayout_23">
+                                 <item row="3" column="0">
+                                  <widget class="QLabel" name="label_30">
+                                   <property name="text">
+                                    <string>Drummond</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="1" column="0" rowspan="2" colspan="2">
+                                  <widget class="QLabel" name="label_31">
+                                   <property name="text">
+                                    <string>Costa Lacerda</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="3" column="2">
+                                  <widget class="QLineEdit" name="lineEdit_9"/>
+                                 </item>
+                                 <item row="1" column="2">
+                                  <widget class="QLineEdit" name="lineEdit_10"/>
+                                 </item>
+                                 <item row="0" column="0" colspan="3">
+                                  <widget class="QLabel" name="label_113">
+                                   <property name="font">
+                                    <font>
+                                     <family>Poppins SemiBold</family>
+                                     <pointsize>10</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Custos de Movimentação de Pátio</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item row="2" column="0">
+                               <widget class="QFrame" name="frame_61">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QGridLayout" name="gridLayout_26">
+                                 <property name="leftMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="topMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="rightMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="spacing">
+                                  <number>5</number>
+                                 </property>
+                                 <item row="2" column="0">
+                                  <widget class="QLabel" name="label_60">
+                                   <property name="text">
+                                    <string>Ipaba:</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="4" column="2">
+                                  <widget class="QLabel" name="label_96">
+                                   <property name="text">
+                                    <string>Pompéu:</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="3" column="2">
+                                  <widget class="QLabel" name="label_97">
+                                   <property name="text">
+                                    <string>Cocais:</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="2" column="2">
+                                  <widget class="QLabel" name="label_114">
+                                   <property name="text">
+                                    <string>Piracicaba:</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="1" column="3">
+                                  <widget class="QLineEdit" name="est_sb_2">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>100</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">color:white;
+border-radius:6px;</string>
+                                   </property>
+                                   <property name="frame">
+                                    <bool>false</bool>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="2" column="3">
+                                  <widget class="QLineEdit" name="est_pi_2">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>100</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">color:white;
+border-radius:6px;</string>
+                                   </property>
+                                   <property name="frame">
+                                    <bool>false</bool>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="3" column="3">
+                                  <widget class="QLineEdit" name="est_co_2">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>100</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">color:white;
+border-radius:6px;</string>
+                                   </property>
+                                   <property name="frame">
+                                    <bool>false</bool>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="4" column="3">
+                                  <widget class="QLineEdit" name="est_po_2">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>100</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">color:white;
+border-radius:6px;</string>
+                                   </property>
+                                   <property name="frame">
+                                    <bool>false</bool>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="2" column="1">
+                                  <widget class="QLineEdit" name="est_ip_2">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>100</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">color:white;
+border-radius:6px;</string>
+                                   </property>
+                                   <property name="frame">
+                                    <bool>false</bool>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="3" column="1">
+                                  <widget class="QLineEdit" name="est_vi_2">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>100</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">color:white;
+border-radius:6px;</string>
+                                   </property>
+                                   <property name="frame">
+                                    <bool>false</bool>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="3" column="0">
+                                  <widget class="QLabel" name="label_115">
+                                   <property name="text">
+                                    <string>Virginópolis:</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="1" column="0">
+                                  <widget class="QLabel" name="label_32">
+                                   <property name="text">
+                                    <string>Belo Oriente:</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="1" column="1">
+                                  <widget class="QLineEdit" name="est_bo_2">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>100</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">color:white;
+border-radius:6px;</string>
+                                   </property>
+                                   <property name="frame">
+                                    <bool>false</bool>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="4" column="0">
+                                  <widget class="QLabel" name="label_33">
+                                   <property name="text">
+                                    <string>Sabinópolis:</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="4" column="1">
+                                  <widget class="QLineEdit" name="est_sa_2">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>100</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">color:white;
+border-radius:6px;</string>
+                                   </property>
+                                   <property name="frame">
+                                    <bool>false</bool>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="1" column="2">
+                                  <widget class="QLabel" name="label_34">
+                                   <property name="text">
+                                    <string>Santa Bárbara:</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="0" column="0" colspan="4">
+                                  <widget class="QLabel" name="label_116">
+                                   <property name="font">
+                                    <font>
+                                     <family>Poppins SemiBold</family>
+                                     <pointsize>10</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Custos de Estradas Externas</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item row="0" column="0">
+                            <widget class="QFrame" name="frame_59">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>600</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_11">
+                              <item>
+                               <widget class="QFrame" name="frame_60">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_30">
+                                 <item>
+                                  <widget class="QLabel" name="label_111">
+                                   <property name="font">
+                                    <font>
+                                     <family>Poppins SemiBold</family>
+                                     <pointsize>10</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Custos de Transporte Rodoviário</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <spacer name="horizontalSpacer_7">
+                                   <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                   </property>
+                                   <property name="sizeHint" stdset="0">
+                                    <size>
+                                     <width>40</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                  </spacer>
+                                 </item>
+                                 <item>
+                                  <widget class="QPushButton" name="button_open_14">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>42</width>
+                                     <height>42</height>
+                                    </size>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTableWidget" name="tab_14">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>450</height>
+                                 </size>
+                                </property>
+                                <property name="font">
+                                 <font>
+                                  <family>Poppins SemiBold</family>
+                                  <pointsize>8</pointsize>
+                                  <weight>75</weight>
+                                  <bold>true</bold>
+                                 </font>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Plain</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>10</number>
+                                </property>
+                                <property name="sortingEnabled">
+                                 <bool>true</bool>
+                                </property>
+                                <attribute name="horizontalHeaderDefaultSectionSize">
+                                 <number>150</number>
+                                </attribute>
+                                <attribute name="horizontalHeaderMinimumSectionSize">
+                                 <number>50</number>
+                                </attribute>
+                                <attribute name="verticalHeaderVisible">
+                                 <bool>false</bool>
+                                </attribute>
+                                <attribute name="verticalHeaderDefaultSectionSize">
+                                 <number>80</number>
+                                </attribute>
+                                <attribute name="verticalHeaderMinimumSectionSize">
+                                 <number>40</number>
+                                </attribute>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item row="4" column="0">
+                         <widget class="QFrame" name="frame_8">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_8">
+                           <item>
+                            <widget class="QFrame" name="frame_58">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>600</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_5">
+                              <item>
+                               <widget class="QFrame" name="frame_9">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                                 <item>
+                                  <widget class="QLabel" name="label_58">
+                                   <property name="font">
+                                    <font>
+                                     <family>Poppins SemiBold</family>
+                                     <pointsize>10</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Recomendação Técnica de Material Genético</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <spacer name="horizontalSpacer_5">
+                                   <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                   </property>
+                                   <property name="sizeHint" stdset="0">
+                                    <size>
+                                     <width>40</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                  </spacer>
+                                 </item>
+                                 <item>
+                                  <widget class="QPushButton" name="button_open_3">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>42</width>
+                                     <height>42</height>
+                                    </size>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTableWidget" name="tab_4">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>450</height>
+                                 </size>
+                                </property>
+                                <property name="font">
+                                 <font>
+                                  <family>Poppins SemiBold</family>
+                                  <pointsize>8</pointsize>
+                                  <weight>75</weight>
+                                  <bold>true</bold>
+                                 </font>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Plain</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>10</number>
+                                </property>
+                                <property name="sortingEnabled">
+                                 <bool>true</bool>
+                                </property>
+                                <attribute name="horizontalHeaderDefaultSectionSize">
+                                 <number>150</number>
+                                </attribute>
+                                <attribute name="horizontalHeaderMinimumSectionSize">
+                                 <number>50</number>
+                                </attribute>
+                                <attribute name="verticalHeaderVisible">
+                                 <bool>false</bool>
+                                </attribute>
+                                <attribute name="verticalHeaderDefaultSectionSize">
+                                 <number>80</number>
+                                </attribute>
+                                <attribute name="verticalHeaderMinimumSectionSize">
+                                 <number>40</number>
+                                </attribute>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item row="3" column="2">
+                         <widget class="QFrame" name="frame_50">
+                          <property name="maximumSize">
+                           <size>
+                            <width>420</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_3">
+                           <item>
+                            <widget class="QFrame" name="frame_51">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_29">
+                              <item>
+                               <widget class="QLabel" name="label_99">
+                                <property name="font">
+                                 <font>
+                                  <family>Poppins SemiBold</family>
+                                  <pointsize>10</pointsize>
+                                 </font>
+                                </property>
+                                <property name="text">
+                                 <string>Orçamento de Talhões</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <spacer name="horizontalSpacer_12">
+                                <property name="orientation">
+                                 <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="sizeHint" stdset="0">
+                                 <size>
+                                  <width>40</width>
+                                  <height>20</height>
+                                 </size>
+                                </property>
+                               </spacer>
+                              </item>
+                              <item>
+                               <widget class="QPushButton" name="button_open_4">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>42</width>
+                                  <height>42</height>
+                                 </size>
+                                </property>
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QTableWidget" name="tab_5">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>450</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <family>Poppins SemiBold</family>
+                               <pointsize>8</pointsize>
+                              </font>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Plain</enum>
+                             </property>
+                             <property name="lineWidth">
+                              <number>10</number>
+                             </property>
+                             <property name="sortingEnabled">
+                              <bool>true</bool>
+                             </property>
+                             <attribute name="horizontalHeaderDefaultSectionSize">
+                              <number>150</number>
+                             </attribute>
+                             <attribute name="horizontalHeaderMinimumSectionSize">
+                              <number>50</number>
+                             </attribute>
+                             <attribute name="verticalHeaderVisible">
+                              <bool>false</bool>
+                             </attribute>
+                             <attribute name="verticalHeaderDefaultSectionSize">
+                              <number>80</number>
+                             </attribute>
+                             <attribute name="verticalHeaderMinimumSectionSize">
+                              <number>40</number>
+                             </attribute>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
                         <item row="3" column="0">
                          <widget class="QFrame" name="frame_49">
                           <property name="sizePolicy">
@@ -681,115 +1523,6 @@ p, li { white-space: pre-wrap; }
                                <pointsize>8</pointsize>
                                <weight>75</weight>
                                <bold>true</bold>
-                              </font>
-                             </property>
-                             <property name="frameShadow">
-                              <enum>QFrame::Plain</enum>
-                             </property>
-                             <property name="lineWidth">
-                              <number>10</number>
-                             </property>
-                             <property name="sortingEnabled">
-                              <bool>true</bool>
-                             </property>
-                             <attribute name="horizontalHeaderDefaultSectionSize">
-                              <number>150</number>
-                             </attribute>
-                             <attribute name="horizontalHeaderMinimumSectionSize">
-                              <number>50</number>
-                             </attribute>
-                             <attribute name="verticalHeaderVisible">
-                              <bool>false</bool>
-                             </attribute>
-                             <attribute name="verticalHeaderDefaultSectionSize">
-                              <number>80</number>
-                             </attribute>
-                             <attribute name="verticalHeaderMinimumSectionSize">
-                              <number>40</number>
-                             </attribute>
-                            </widget>
-                           </item>
-                          </layout>
-                         </widget>
-                        </item>
-                        <item row="3" column="1">
-                         <widget class="QFrame" name="frame_50">
-                          <property name="maximumSize">
-                           <size>
-                            <width>420</width>
-                            <height>16777215</height>
-                           </size>
-                          </property>
-                          <property name="frameShape">
-                           <enum>QFrame::StyledPanel</enum>
-                          </property>
-                          <property name="frameShadow">
-                           <enum>QFrame::Raised</enum>
-                          </property>
-                          <layout class="QVBoxLayout" name="verticalLayout_3">
-                           <item>
-                            <widget class="QFrame" name="frame_51">
-                             <property name="frameShape">
-                              <enum>QFrame::StyledPanel</enum>
-                             </property>
-                             <property name="frameShadow">
-                              <enum>QFrame::Raised</enum>
-                             </property>
-                             <layout class="QHBoxLayout" name="horizontalLayout_29">
-                              <item>
-                               <widget class="QLabel" name="label_99">
-                                <property name="font">
-                                 <font>
-                                  <family>Poppins SemiBold</family>
-                                  <pointsize>10</pointsize>
-                                 </font>
-                                </property>
-                                <property name="text">
-                                 <string>Orçamento de Talhões</string>
-                                </property>
-                               </widget>
-                              </item>
-                              <item>
-                               <spacer name="horizontalSpacer_12">
-                                <property name="orientation">
-                                 <enum>Qt::Horizontal</enum>
-                                </property>
-                                <property name="sizeHint" stdset="0">
-                                 <size>
-                                  <width>40</width>
-                                  <height>20</height>
-                                 </size>
-                                </property>
-                               </spacer>
-                              </item>
-                              <item>
-                               <widget class="QPushButton" name="button_open_4">
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>42</width>
-                                  <height>42</height>
-                                 </size>
-                                </property>
-                                <property name="text">
-                                 <string/>
-                                </property>
-                               </widget>
-                              </item>
-                             </layout>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QTableWidget" name="tab_5">
-                             <property name="minimumSize">
-                              <size>
-                               <width>0</width>
-                               <height>450</height>
-                              </size>
-                             </property>
-                             <property name="font">
-                              <font>
-                               <family>Poppins SemiBold</family>
-                               <pointsize>8</pointsize>
                               </font>
                              </property>
                              <property name="frameShadow">
@@ -1133,7 +1866,7 @@ border-radius: 12px;</string>
                           </layout>
                          </widget>
                         </item>
-                        <item row="5" column="0" colspan="2">
+                        <item row="6" column="0" colspan="3">
                          <widget class="QFrame" name="frame_53">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -1252,257 +1985,7 @@ border-radius: 12px;</string>
                           </layout>
                          </widget>
                         </item>
-                        <item row="0" column="0" colspan="2">
-                         <widget class="QFrame" name="frame">
-                          <property name="frameShape">
-                           <enum>QFrame::StyledPanel</enum>
-                          </property>
-                          <property name="frameShadow">
-                           <enum>QFrame::Raised</enum>
-                          </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_4">
-                           <item>
-                            <widget class="QFrame" name="frame_55">
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <property name="minimumSize">
-                              <size>
-                               <width>600</width>
-                               <height>0</height>
-                              </size>
-                             </property>
-                             <property name="frameShape">
-                              <enum>QFrame::StyledPanel</enum>
-                             </property>
-                             <property name="frameShadow">
-                              <enum>QFrame::Raised</enum>
-                             </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_12">
-                              <item>
-                               <widget class="QFrame" name="frame_10">
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <layout class="QHBoxLayout" name="horizontalLayout_13">
-                                 <item>
-                                  <widget class="QLabel" name="label_108">
-                                   <property name="font">
-                                    <font>
-                                     <family>Poppins SemiBold</family>
-                                     <pointsize>10</pointsize>
-                                     <weight>75</weight>
-                                     <bold>true</bold>
-                                    </font>
-                                   </property>
-                                   <property name="text">
-                                    <string>Inventário Florestal Pré-Corte</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item>
-                                  <spacer name="horizontalSpacer_8">
-                                   <property name="orientation">
-                                    <enum>Qt::Horizontal</enum>
-                                   </property>
-                                   <property name="sizeHint" stdset="0">
-                                    <size>
-                                     <width>40</width>
-                                     <height>20</height>
-                                    </size>
-                                   </property>
-                                  </spacer>
-                                 </item>
-                                 <item>
-                                  <widget class="QPushButton" name="button_open_16">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>42</width>
-                                     <height>42</height>
-                                    </size>
-                                   </property>
-                                   <property name="text">
-                                    <string/>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                </layout>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QTableWidget" name="tab_2">
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>0</width>
-                                  <height>450</height>
-                                 </size>
-                                </property>
-                                <property name="font">
-                                 <font>
-                                  <family>Poppins SemiBold</family>
-                                  <pointsize>8</pointsize>
-                                  <weight>75</weight>
-                                  <bold>true</bold>
-                                 </font>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Plain</enum>
-                                </property>
-                                <property name="lineWidth">
-                                 <number>10</number>
-                                </property>
-                                <property name="sortingEnabled">
-                                 <bool>true</bool>
-                                </property>
-                                <attribute name="horizontalHeaderDefaultSectionSize">
-                                 <number>150</number>
-                                </attribute>
-                                <attribute name="horizontalHeaderMinimumSectionSize">
-                                 <number>50</number>
-                                </attribute>
-                                <attribute name="verticalHeaderVisible">
-                                 <bool>false</bool>
-                                </attribute>
-                                <attribute name="verticalHeaderDefaultSectionSize">
-                                 <number>80</number>
-                                </attribute>
-                                <attribute name="verticalHeaderMinimumSectionSize">
-                                 <number>40</number>
-                                </attribute>
-                               </widget>
-                              </item>
-                             </layout>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QFrame" name="frame_56">
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <property name="minimumSize">
-                              <size>
-                               <width>600</width>
-                               <height>0</height>
-                              </size>
-                             </property>
-                             <property name="frameShape">
-                              <enum>QFrame::StyledPanel</enum>
-                             </property>
-                             <property name="frameShadow">
-                              <enum>QFrame::Raised</enum>
-                             </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_22">
-                              <item>
-                               <widget class="QFrame" name="frame_12">
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <layout class="QHBoxLayout" name="horizontalLayout_27">
-                                 <item>
-                                  <widget class="QLabel" name="label_109">
-                                   <property name="font">
-                                    <font>
-                                     <family>Poppins SemiBold</family>
-                                     <pointsize>10</pointsize>
-                                     <weight>75</weight>
-                                     <bold>true</bold>
-                                    </font>
-                                   </property>
-                                   <property name="text">
-                                    <string>Inventário Florestal Contínuo</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item>
-                                  <spacer name="horizontalSpacer_13">
-                                   <property name="orientation">
-                                    <enum>Qt::Horizontal</enum>
-                                   </property>
-                                   <property name="sizeHint" stdset="0">
-                                    <size>
-                                     <width>40</width>
-                                     <height>20</height>
-                                    </size>
-                                   </property>
-                                  </spacer>
-                                 </item>
-                                 <item>
-                                  <widget class="QPushButton" name="button_open_1">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>42</width>
-                                     <height>42</height>
-                                    </size>
-                                   </property>
-                                   <property name="text">
-                                    <string/>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                </layout>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QTableWidget" name="tab_1">
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>0</width>
-                                  <height>450</height>
-                                 </size>
-                                </property>
-                                <property name="font">
-                                 <font>
-                                  <family>Poppins SemiBold</family>
-                                  <pointsize>8</pointsize>
-                                  <weight>75</weight>
-                                  <bold>true</bold>
-                                 </font>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Plain</enum>
-                                </property>
-                                <property name="lineWidth">
-                                 <number>10</number>
-                                </property>
-                                <property name="sortingEnabled">
-                                 <bool>true</bool>
-                                </property>
-                                <attribute name="horizontalHeaderDefaultSectionSize">
-                                 <number>150</number>
-                                </attribute>
-                                <attribute name="horizontalHeaderMinimumSectionSize">
-                                 <number>50</number>
-                                </attribute>
-                                <attribute name="verticalHeaderVisible">
-                                 <bool>false</bool>
-                                </attribute>
-                                <attribute name="verticalHeaderDefaultSectionSize">
-                                 <number>80</number>
-                                </attribute>
-                                <attribute name="verticalHeaderMinimumSectionSize">
-                                 <number>40</number>
-                                </attribute>
-                               </widget>
-                              </item>
-                             </layout>
-                            </widget>
-                           </item>
-                          </layout>
-                         </widget>
-                        </item>
-                        <item row="2" column="1">
+                        <item row="2" column="2">
                          <widget class="QFrame" name="frame_52">
                           <property name="styleSheet">
                            <string notr="true">background-color: rgb(255, 85, 0);
@@ -1732,816 +2215,972 @@ border-radius: 12px;</string>
                           </layout>
                          </widget>
                         </item>
-                       </layout>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="Mat_gen">
-             <layout class="QVBoxLayout" name="verticalLayout_9">
-              <item>
-               <widget class="QFrame" name="frame_8">
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <layout class="QHBoxLayout" name="horizontalLayout_8">
-                 <item>
-                  <widget class="QLabel" name="label_58">
-                   <property name="font">
-                    <font>
-                     <family>Poppins SemiBold</family>
-                     <pointsize>10</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Recomendação Técnica de Material Genético</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <spacer name="horizontalSpacer_5">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
-                  <widget class="QPushButton" name="button_open_3">
-                   <property name="minimumSize">
-                    <size>
-                     <width>42</width>
-                     <height>42</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QTableWidget" name="tab_4">
-                <property name="font">
-                 <font>
-                  <family>Poppins</family>
-                  <pointsize>8</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Plain</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>10</number>
-                </property>
-                <property name="sortingEnabled">
-                 <bool>true</bool>
-                </property>
-                <attribute name="horizontalHeaderDefaultSectionSize">
-                 <number>150</number>
-                </attribute>
-                <attribute name="horizontalHeaderMinimumSectionSize">
-                 <number>50</number>
-                </attribute>
-                <attribute name="verticalHeaderVisible">
-                 <bool>false</bool>
-                </attribute>
-                <attribute name="verticalHeaderDefaultSectionSize">
-                 <number>80</number>
-                </attribute>
-                <attribute name="verticalHeaderHighlightSections">
-                 <bool>false</bool>
-                </attribute>
-                <attribute name="verticalHeaderMinimumSectionSize">
-                 <number>40</number>
-                </attribute>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="Inclinao">
-             <layout class="QVBoxLayout" name="verticalLayout_11">
-              <item>
-               <widget class="QFrame" name="frame_11">
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <layout class="QHBoxLayout" name="horizontalLayout_12">
-                 <item>
-                  <widget class="QLabel" name="label_60">
-                   <property name="font">
-                    <font>
-                     <family>Poppins SemiBold</family>
-                     <pointsize>10</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Classes de Inclinação Média</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <spacer name="horizontalSpacer_7">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
-                  <widget class="QPushButton" name="button_open_5">
-                   <property name="minimumSize">
-                    <size>
-                     <width>42</width>
-                     <height>42</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QTableWidget" name="tab_6">
-                <property name="font">
-                 <font>
-                  <family>Poppins SemiBold</family>
-                  <pointsize>8</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Plain</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>10</number>
-                </property>
-                <property name="sortingEnabled">
-                 <bool>true</bool>
-                </property>
-                <attribute name="horizontalHeaderDefaultSectionSize">
-                 <number>150</number>
-                </attribute>
-                <attribute name="horizontalHeaderMinimumSectionSize">
-                 <number>50</number>
-                </attribute>
-                <attribute name="verticalHeaderVisible">
-                 <bool>false</bool>
-                </attribute>
-                <attribute name="verticalHeaderDefaultSectionSize">
-                 <number>80</number>
-                </attribute>
-                <attribute name="verticalHeaderMinimumSectionSize">
-                 <number>40</number>
-                </attribute>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="Silvicultura"/>
-            <widget class="QWidget" name="Colheita">
-             <layout class="QHBoxLayout" name="horizontalLayout_21">
-              <item>
-               <widget class="QScrollArea" name="scrollArea_2">
-                <property name="widgetResizable">
-                 <bool>true</bool>
-                </property>
-                <widget class="QWidget" name="scrollAreaWidgetContents_2">
-                 <property name="geometry">
-                  <rect>
-                   <x>-726</x>
-                   <y>0</y>
-                   <width>1756</width>
-                   <height>443</height>
-                  </rect>
-                 </property>
-                 <layout class="QHBoxLayout" name="horizontalLayout_20">
-                  <item>
-                   <widget class="QFrame" name="frame_23">
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_13">
-                     <item>
-                      <widget class="QFrame" name="frame_24">
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QHBoxLayout" name="horizontalLayout_19">
-                        <item>
-                         <widget class="QLabel" name="label_89">
-                          <property name="font">
-                           <font>
-                            <family>Poppins SemiBold</family>
-                            <pointsize>10</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                          <property name="text">
-                           <string>Custos de Colheita - Piracicaba</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QPushButton" name="button_open_8">
-                          <property name="minimumSize">
-                           <size>
-                            <width>42</width>
-                            <height>42</height>
-                           </size>
-                          </property>
-                          <property name="text">
-                           <string/>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QTableWidget" name="tab_8">
-                       <property name="frameShadow">
-                        <enum>QFrame::Plain</enum>
-                       </property>
-                       <property name="lineWidth">
-                        <number>10</number>
-                       </property>
-                       <property name="sortingEnabled">
-                        <bool>true</bool>
-                       </property>
-                       <attribute name="horizontalHeaderDefaultSectionSize">
-                        <number>150</number>
-                       </attribute>
-                       <attribute name="horizontalHeaderMinimumSectionSize">
-                        <number>50</number>
-                       </attribute>
-                       <attribute name="verticalHeaderVisible">
-                        <bool>false</bool>
-                       </attribute>
-                       <attribute name="verticalHeaderDefaultSectionSize">
-                        <number>80</number>
-                       </attribute>
-                       <attribute name="verticalHeaderMinimumSectionSize">
-                        <number>40</number>
-                       </attribute>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_17">
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_14">
-                     <item>
-                      <widget class="QFrame" name="frame_18">
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QHBoxLayout" name="horizontalLayout_16">
-                        <item>
-                         <widget class="QLabel" name="label_90">
-                          <property name="font">
-                           <font>
-                            <family>Poppins SemiBold</family>
-                            <pointsize>10</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                          <property name="text">
-                           <string>Custos de Colheita - Pompéu</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QPushButton" name="button_open_9">
-                          <property name="minimumSize">
-                           <size>
-                            <width>42</width>
-                            <height>42</height>
-                           </size>
-                          </property>
-                          <property name="text">
-                           <string/>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QTableWidget" name="tab_9">
-                       <property name="frameShadow">
-                        <enum>QFrame::Plain</enum>
-                       </property>
-                       <property name="lineWidth">
-                        <number>10</number>
-                       </property>
-                       <property name="sortingEnabled">
-                        <bool>true</bool>
-                       </property>
-                       <attribute name="horizontalHeaderDefaultSectionSize">
-                        <number>150</number>
-                       </attribute>
-                       <attribute name="horizontalHeaderMinimumSectionSize">
-                        <number>50</number>
-                       </attribute>
-                       <attribute name="verticalHeaderVisible">
-                        <bool>false</bool>
-                       </attribute>
-                       <attribute name="verticalHeaderDefaultSectionSize">
-                        <number>80</number>
-                       </attribute>
-                       <attribute name="verticalHeaderMinimumSectionSize">
-                        <number>40</number>
-                       </attribute>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_19">
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_15">
-                     <item>
-                      <widget class="QFrame" name="frame_20">
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QHBoxLayout" name="horizontalLayout_17">
-                        <item>
-                         <widget class="QLabel" name="label_91">
-                          <property name="font">
-                           <font>
-                            <family>Poppins SemiBold</family>
-                            <pointsize>10</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                          <property name="text">
-                           <string>Custos de Colheita - Cocais</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QPushButton" name="button_open_10">
-                          <property name="text">
-                           <string>+</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QTableWidget" name="tab_10">
-                       <property name="frameShadow">
-                        <enum>QFrame::Plain</enum>
-                       </property>
-                       <property name="lineWidth">
-                        <number>10</number>
-                       </property>
-                       <property name="sortingEnabled">
-                        <bool>true</bool>
-                       </property>
-                       <attribute name="horizontalHeaderDefaultSectionSize">
-                        <number>150</number>
-                       </attribute>
-                       <attribute name="horizontalHeaderMinimumSectionSize">
-                        <number>50</number>
-                       </attribute>
-                       <attribute name="verticalHeaderVisible">
-                        <bool>false</bool>
-                       </attribute>
-                       <attribute name="verticalHeaderDefaultSectionSize">
-                        <number>80</number>
-                       </attribute>
-                       <attribute name="verticalHeaderMinimumSectionSize">
-                        <number>40</number>
-                       </attribute>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_14">
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_16">
-                     <item>
-                      <widget class="QFrame" name="frame_2">
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QHBoxLayout" name="horizontalLayout_14">
-                        <item>
-                         <widget class="QLabel" name="label_92">
-                          <property name="font">
-                           <font>
-                            <family>Poppins SemiBold</family>
-                            <pointsize>10</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                          <property name="text">
-                           <string>Custos de Colheita - Guanhães</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QPushButton" name="button_open_11">
-                          <property name="text">
-                           <string>+</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QTableWidget" name="tab_11">
-                       <property name="frameShadow">
-                        <enum>QFrame::Plain</enum>
-                       </property>
-                       <property name="lineWidth">
-                        <number>10</number>
-                       </property>
-                       <property name="sortingEnabled">
-                        <bool>true</bool>
-                       </property>
-                       <attribute name="horizontalHeaderDefaultSectionSize">
-                        <number>150</number>
-                       </attribute>
-                       <attribute name="horizontalHeaderMinimumSectionSize">
-                        <number>50</number>
-                       </attribute>
-                       <attribute name="verticalHeaderVisible">
-                        <bool>false</bool>
-                       </attribute>
-                       <attribute name="verticalHeaderDefaultSectionSize">
-                        <number>80</number>
-                       </attribute>
-                       <attribute name="verticalHeaderMinimumSectionSize">
-                        <number>40</number>
-                       </attribute>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_15">
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_17">
-                     <item>
-                      <widget class="QFrame" name="frame_16">
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QHBoxLayout" name="horizontalLayout_15">
-                        <item>
-                         <widget class="QLabel" name="label_93">
-                          <property name="font">
-                           <font>
-                            <family>Poppins SemiBold</family>
-                            <pointsize>10</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                          <property name="text">
-                           <string>Custos de Colheita - Belo Oriente e Ipaba</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QPushButton" name="button_open_12">
-                          <property name="text">
-                           <string>+</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QPushButton" name="pushButton_28">
-                          <property name="text">
-                           <string>V</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QTableWidget" name="tab_12">
-                       <property name="frameShadow">
-                        <enum>QFrame::Plain</enum>
-                       </property>
-                       <property name="lineWidth">
-                        <number>10</number>
-                       </property>
-                       <property name="sortingEnabled">
-                        <bool>true</bool>
-                       </property>
-                       <attribute name="horizontalHeaderDefaultSectionSize">
-                        <number>150</number>
-                       </attribute>
-                       <attribute name="horizontalHeaderMinimumSectionSize">
-                        <number>50</number>
-                       </attribute>
-                       <attribute name="verticalHeaderVisible">
-                        <bool>false</bool>
-                       </attribute>
-                       <attribute name="verticalHeaderDefaultSectionSize">
-                        <number>80</number>
-                       </attribute>
-                       <attribute name="verticalHeaderMinimumSectionSize">
-                        <number>40</number>
-                       </attribute>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_21">
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_18">
-                     <item>
-                      <widget class="QFrame" name="frame_22">
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QHBoxLayout" name="horizontalLayout_18">
-                        <item>
-                         <widget class="QLabel" name="label_94">
-                          <property name="font">
-                           <font>
-                            <family>Poppins SemiBold</family>
-                            <pointsize>10</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                          <property name="text">
-                           <string>Custos de Colheita - Santa Bárbara</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QPushButton" name="button_open_13">
-                          <property name="text">
-                           <string>+</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QPushButton" name="pushButton_37">
-                          <property name="text">
-                           <string>V</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QTableWidget" name="tab_13">
-                       <property name="frameShadow">
-                        <enum>QFrame::Plain</enum>
-                       </property>
-                       <property name="lineWidth">
-                        <number>10</number>
-                       </property>
-                       <property name="sortingEnabled">
-                        <bool>true</bool>
-                       </property>
-                       <attribute name="horizontalHeaderDefaultSectionSize">
-                        <number>150</number>
-                       </attribute>
-                       <attribute name="horizontalHeaderMinimumSectionSize">
-                        <number>50</number>
-                       </attribute>
-                       <attribute name="verticalHeaderVisible">
-                        <bool>false</bool>
-                       </attribute>
-                       <attribute name="verticalHeaderDefaultSectionSize">
-                        <number>80</number>
-                       </attribute>
-                       <attribute name="verticalHeaderMinimumSectionSize">
-                        <number>40</number>
-                       </attribute>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="Transporte">
-             <layout class="QVBoxLayout" name="verticalLayout_19">
-              <item>
-               <widget class="QScrollArea" name="scrollArea_3">
-                <property name="widgetResizable">
-                 <bool>true</bool>
-                </property>
-                <widget class="QWidget" name="scrollAreaWidgetContents_4">
-                 <property name="geometry">
-                  <rect>
-                   <x>0</x>
-                   <y>0</y>
-                   <width>1030</width>
-                   <height>460</height>
-                  </rect>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_20">
-                  <item>
-                   <widget class="QFrame" name="frame_28">
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_23">
-                     <item>
-                      <widget class="QFrame" name="frame_27">
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QGridLayout" name="gridLayout_3">
-                        <item row="2" column="0">
-                         <widget class="QLabel" name="label_21">
-                          <property name="text">
-                           <string>Piracicaba:</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="2" column="1">
-                         <widget class="QLineEdit" name="lineEdit_2"/>
-                        </item>
-                        <item row="1" column="1">
-                         <widget class="QLineEdit" name="lineEdit"/>
-                        </item>
-                        <item row="1" column="0">
-                         <widget class="QLabel" name="label_20">
-                          <property name="text">
-                           <string>Santa Bárbara:</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="0" column="0" colspan="2">
-                         <widget class="QLabel" name="label_96">
-                          <property name="font">
-                           <font>
-                            <family>Poppins SemiBold</family>
-                            <pointsize>10</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                          <property name="text">
-                           <string>Custos de Transporte Ferroviário</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QFrame" name="frame_26">
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QGridLayout" name="gridLayout_5">
-                        <item row="3" column="0">
-                         <widget class="QLabel" name="label_22">
-                          <property name="text">
-                           <string>Drummond</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="1" column="0" rowspan="2" colspan="2">
-                         <widget class="QLabel" name="label_23">
-                          <property name="text">
-                           <string>Costa Lacerda</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="3" column="2">
-                         <widget class="QLineEdit" name="lineEdit_3"/>
-                        </item>
-                        <item row="1" column="2">
-                         <widget class="QLineEdit" name="lineEdit_4"/>
-                        </item>
                         <item row="0" column="0" colspan="3">
-                         <widget class="QLabel" name="label_97">
-                          <property name="font">
-                           <font>
-                            <family>Poppins SemiBold</family>
-                            <pointsize>10</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
-                           </font>
+                         <widget class="QFrame" name="frame">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
                           </property>
-                          <property name="text">
-                           <string>Custos de Movimentação de Pátio</string>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
                           </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_4">
+                           <item>
+                            <widget class="QFrame" name="frame_55">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>600</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_12">
+                              <item>
+                               <widget class="QFrame" name="frame_10">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_13">
+                                 <item>
+                                  <widget class="QLabel" name="label_108">
+                                   <property name="font">
+                                    <font>
+                                     <family>Poppins SemiBold</family>
+                                     <pointsize>10</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Inventário Florestal Pré-Corte</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <spacer name="horizontalSpacer_3">
+                                   <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                   </property>
+                                   <property name="sizeHint" stdset="0">
+                                    <size>
+                                     <width>40</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                  </spacer>
+                                 </item>
+                                 <item>
+                                  <widget class="QLineEdit" name="lineEdit"/>
+                                 </item>
+                                 <item>
+                                  <spacer name="horizontalSpacer_8">
+                                   <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                   </property>
+                                   <property name="sizeHint" stdset="0">
+                                    <size>
+                                     <width>40</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                  </spacer>
+                                 </item>
+                                 <item>
+                                  <widget class="QPushButton" name="button_open_16">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>42</width>
+                                     <height>42</height>
+                                    </size>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTableWidget" name="tab_2">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>450</height>
+                                 </size>
+                                </property>
+                                <property name="font">
+                                 <font>
+                                  <family>Poppins SemiBold</family>
+                                  <pointsize>8</pointsize>
+                                  <weight>75</weight>
+                                  <bold>true</bold>
+                                 </font>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::NoFrame</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Plain</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>10</number>
+                                </property>
+                                <property name="sortingEnabled">
+                                 <bool>true</bool>
+                                </property>
+                                <attribute name="horizontalHeaderDefaultSectionSize">
+                                 <number>150</number>
+                                </attribute>
+                                <attribute name="horizontalHeaderMinimumSectionSize">
+                                 <number>50</number>
+                                </attribute>
+                                <attribute name="verticalHeaderVisible">
+                                 <bool>false</bool>
+                                </attribute>
+                                <attribute name="verticalHeaderDefaultSectionSize">
+                                 <number>80</number>
+                                </attribute>
+                                <attribute name="verticalHeaderMinimumSectionSize">
+                                 <number>40</number>
+                                </attribute>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_56">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>600</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_22">
+                              <item>
+                               <widget class="QFrame" name="frame_12">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_27">
+                                 <item>
+                                  <widget class="QLabel" name="label_109">
+                                   <property name="font">
+                                    <font>
+                                     <family>Poppins SemiBold</family>
+                                     <pointsize>10</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Inventário Florestal Contínuo</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <spacer name="horizontalSpacer_10">
+                                   <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                   </property>
+                                   <property name="sizeHint" stdset="0">
+                                    <size>
+                                     <width>40</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                  </spacer>
+                                 </item>
+                                 <item>
+                                  <widget class="QLineEdit" name="lineEdit_2"/>
+                                 </item>
+                                 <item>
+                                  <spacer name="horizontalSpacer_13">
+                                   <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                   </property>
+                                   <property name="sizeHint" stdset="0">
+                                    <size>
+                                     <width>40</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                  </spacer>
+                                 </item>
+                                 <item>
+                                  <widget class="QPushButton" name="button_open_1">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>42</width>
+                                     <height>42</height>
+                                    </size>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTableWidget" name="tab_1">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>450</height>
+                                 </size>
+                                </property>
+                                <property name="font">
+                                 <font>
+                                  <family>Poppins SemiBold</family>
+                                  <pointsize>8</pointsize>
+                                  <weight>75</weight>
+                                  <bold>true</bold>
+                                 </font>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true"/>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::NoFrame</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Plain</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>10</number>
+                                </property>
+                                <property name="midLineWidth">
+                                 <number>0</number>
+                                </property>
+                                <property name="sortingEnabled">
+                                 <bool>true</bool>
+                                </property>
+                                <attribute name="horizontalHeaderDefaultSectionSize">
+                                 <number>150</number>
+                                </attribute>
+                                <attribute name="horizontalHeaderMinimumSectionSize">
+                                 <number>50</number>
+                                </attribute>
+                                <attribute name="verticalHeaderVisible">
+                                 <bool>false</bool>
+                                </attribute>
+                                <attribute name="verticalHeaderDefaultSectionSize">
+                                 <number>80</number>
+                                </attribute>
+                                <attribute name="verticalHeaderMinimumSectionSize">
+                                 <number>40</number>
+                                </attribute>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item row="9" column="0">
+                         <widget class="QFrame" name="frame_74">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_28">
+                           <item>
+                            <widget class="QFrame" name="frame_75">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_36">
+                              <item>
+                               <widget class="QLabel" name="label_122">
+                                <property name="font">
+                                 <font>
+                                  <family>Poppins SemiBold</family>
+                                  <pointsize>10</pointsize>
+                                  <weight>75</weight>
+                                  <bold>true</bold>
+                                 </font>
+                                </property>
+                                <property name="text">
+                                 <string>Outros Custos</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QPushButton" name="button_open_15">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>42</width>
+                                  <height>42</height>
+                                 </size>
+                                </property>
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QTableWidget" name="tab_15">
+                             <property name="frameShadow">
+                              <enum>QFrame::Plain</enum>
+                             </property>
+                             <property name="lineWidth">
+                              <number>10</number>
+                             </property>
+                             <property name="sortingEnabled">
+                              <bool>true</bool>
+                             </property>
+                             <attribute name="horizontalHeaderDefaultSectionSize">
+                              <number>150</number>
+                             </attribute>
+                             <attribute name="horizontalHeaderMinimumSectionSize">
+                              <number>50</number>
+                             </attribute>
+                             <attribute name="verticalHeaderVisible">
+                              <bool>false</bool>
+                             </attribute>
+                             <attribute name="verticalHeaderDefaultSectionSize">
+                              <number>80</number>
+                             </attribute>
+                             <attribute name="verticalHeaderMinimumSectionSize">
+                              <number>40</number>
+                             </attribute>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item row="8" column="0" colspan="3">
+                         <widget class="QFrame" name="frame_28">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QGridLayout" name="gridLayout_5">
+                           <item row="1" column="1">
+                            <widget class="QFrame" name="frame_66">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_25">
+                              <item>
+                               <widget class="QFrame" name="frame_67">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_32">
+                                 <item>
+                                  <widget class="QLabel" name="label_118">
+                                   <property name="font">
+                                    <font>
+                                     <family>Poppins SemiBold</family>
+                                     <pointsize>10</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Custos de Colheita - Guanhães</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QPushButton" name="button_open_11">
+                                   <property name="text">
+                                    <string>+</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTableWidget" name="tab_11">
+                                <property name="frameShadow">
+                                 <enum>QFrame::Plain</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>10</number>
+                                </property>
+                                <property name="sortingEnabled">
+                                 <bool>true</bool>
+                                </property>
+                                <attribute name="horizontalHeaderDefaultSectionSize">
+                                 <number>150</number>
+                                </attribute>
+                                <attribute name="horizontalHeaderMinimumSectionSize">
+                                 <number>50</number>
+                                </attribute>
+                                <attribute name="verticalHeaderVisible">
+                                 <bool>false</bool>
+                                </attribute>
+                                <attribute name="verticalHeaderDefaultSectionSize">
+                                 <number>80</number>
+                                </attribute>
+                                <attribute name="verticalHeaderMinimumSectionSize">
+                                 <number>40</number>
+                                </attribute>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item row="1" column="0">
+                            <widget class="QFrame" name="frame_64">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_24">
+                              <item>
+                               <widget class="QFrame" name="frame_65">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_31">
+                                 <item>
+                                  <widget class="QLabel" name="label_117">
+                                   <property name="font">
+                                    <font>
+                                     <family>Poppins SemiBold</family>
+                                     <pointsize>10</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Custos de Colheita - Cocais</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QPushButton" name="button_open_10">
+                                   <property name="text">
+                                    <string>+</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTableWidget" name="tab_10">
+                                <property name="frameShadow">
+                                 <enum>QFrame::Plain</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>10</number>
+                                </property>
+                                <property name="sortingEnabled">
+                                 <bool>true</bool>
+                                </property>
+                                <attribute name="horizontalHeaderDefaultSectionSize">
+                                 <number>150</number>
+                                </attribute>
+                                <attribute name="horizontalHeaderMinimumSectionSize">
+                                 <number>50</number>
+                                </attribute>
+                                <attribute name="verticalHeaderVisible">
+                                 <bool>false</bool>
+                                </attribute>
+                                <attribute name="verticalHeaderDefaultSectionSize">
+                                 <number>80</number>
+                                </attribute>
+                                <attribute name="verticalHeaderMinimumSectionSize">
+                                 <number>40</number>
+                                </attribute>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item row="0" column="0">
+                            <widget class="QFrame" name="frame_68">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_26">
+                              <item>
+                               <widget class="QFrame" name="frame_69">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_33">
+                                 <item>
+                                  <widget class="QLabel" name="label_119">
+                                   <property name="font">
+                                    <font>
+                                     <family>Poppins SemiBold</family>
+                                     <pointsize>10</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Custos de Colheita - Belo Oriente e Ipaba</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QPushButton" name="button_open_12">
+                                   <property name="text">
+                                    <string>+</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTableWidget" name="tab_12">
+                                <property name="frameShadow">
+                                 <enum>QFrame::Plain</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>10</number>
+                                </property>
+                                <property name="sortingEnabled">
+                                 <bool>true</bool>
+                                </property>
+                                <attribute name="horizontalHeaderDefaultSectionSize">
+                                 <number>150</number>
+                                </attribute>
+                                <attribute name="horizontalHeaderMinimumSectionSize">
+                                 <number>50</number>
+                                </attribute>
+                                <attribute name="verticalHeaderVisible">
+                                 <bool>false</bool>
+                                </attribute>
+                                <attribute name="verticalHeaderDefaultSectionSize">
+                                 <number>80</number>
+                                </attribute>
+                                <attribute name="verticalHeaderMinimumSectionSize">
+                                 <number>40</number>
+                                </attribute>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item row="0" column="1">
+                            <widget class="QFrame" name="frame_70">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_27">
+                              <item>
+                               <widget class="QFrame" name="frame_71">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_34">
+                                 <item>
+                                  <widget class="QLabel" name="label_120">
+                                   <property name="font">
+                                    <font>
+                                     <family>Poppins SemiBold</family>
+                                     <pointsize>10</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Custos de Colheita - Santa Bárbara</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QPushButton" name="button_open_13">
+                                   <property name="text">
+                                    <string>+</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QPushButton" name="pushButton_38">
+                                   <property name="text">
+                                    <string>V</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTableWidget" name="tab_13">
+                                <property name="frameShadow">
+                                 <enum>QFrame::Plain</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>10</number>
+                                </property>
+                                <property name="sortingEnabled">
+                                 <bool>true</bool>
+                                </property>
+                                <attribute name="horizontalHeaderDefaultSectionSize">
+                                 <number>150</number>
+                                </attribute>
+                                <attribute name="horizontalHeaderMinimumSectionSize">
+                                 <number>50</number>
+                                </attribute>
+                                <attribute name="verticalHeaderVisible">
+                                 <bool>false</bool>
+                                </attribute>
+                                <attribute name="verticalHeaderDefaultSectionSize">
+                                 <number>80</number>
+                                </attribute>
+                                <attribute name="verticalHeaderMinimumSectionSize">
+                                 <number>40</number>
+                                </attribute>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item row="2" column="0">
+                            <widget class="QFrame" name="frame_29">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_19">
+                              <item>
+                               <widget class="QFrame" name="frame_48">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_22">
+                                 <item>
+                                  <widget class="QLabel" name="label_95">
+                                   <property name="font">
+                                    <font>
+                                     <family>Poppins SemiBold</family>
+                                     <pointsize>10</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Custos de Colheita - Piracicaba</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QPushButton" name="button_open_8">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>42</width>
+                                     <height>42</height>
+                                    </size>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTableWidget" name="tab_8">
+                                <property name="frameShadow">
+                                 <enum>QFrame::Plain</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>10</number>
+                                </property>
+                                <property name="sortingEnabled">
+                                 <bool>true</bool>
+                                </property>
+                                <attribute name="horizontalHeaderDefaultSectionSize">
+                                 <number>150</number>
+                                </attribute>
+                                <attribute name="horizontalHeaderMinimumSectionSize">
+                                 <number>50</number>
+                                </attribute>
+                                <attribute name="verticalHeaderVisible">
+                                 <bool>false</bool>
+                                </attribute>
+                                <attribute name="verticalHeaderDefaultSectionSize">
+                                 <number>80</number>
+                                </attribute>
+                                <attribute name="verticalHeaderMinimumSectionSize">
+                                 <number>40</number>
+                                </attribute>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item row="2" column="1">
+                            <widget class="QFrame" name="frame_62">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_20">
+                              <item>
+                               <widget class="QFrame" name="frame_63">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_23">
+                                 <item>
+                                  <widget class="QLabel" name="label_98">
+                                   <property name="font">
+                                    <font>
+                                     <family>Poppins SemiBold</family>
+                                     <pointsize>10</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Custos de Colheita - Pompéu</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QPushButton" name="button_open_9">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>42</width>
+                                     <height>42</height>
+                                    </size>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTableWidget" name="tab_9">
+                                <property name="frameShadow">
+                                 <enum>QFrame::Plain</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>10</number>
+                                </property>
+                                <property name="sortingEnabled">
+                                 <bool>true</bool>
+                                </property>
+                                <attribute name="horizontalHeaderDefaultSectionSize">
+                                 <number>150</number>
+                                </attribute>
+                                <attribute name="horizontalHeaderMinimumSectionSize">
+                                 <number>50</number>
+                                </attribute>
+                                <attribute name="verticalHeaderVisible">
+                                 <bool>false</bool>
+                                </attribute>
+                                <attribute name="verticalHeaderDefaultSectionSize">
+                                 <number>80</number>
+                                </attribute>
+                                <attribute name="verticalHeaderMinimumSectionSize">
+                                 <number>40</number>
+                                </attribute>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item row="0" column="2" rowspan="3">
+                            <widget class="QFrame" name="frame_72">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>600</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_13">
+                              <item>
+                               <widget class="QFrame" name="frame_73">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_35">
+                                 <item>
+                                  <widget class="QLabel" name="label_121">
+                                   <property name="font">
+                                    <font>
+                                     <family>Poppins SemiBold</family>
+                                     <pointsize>10</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Custos de Silvicultura</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <spacer name="horizontalSpacer_14">
+                                   <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                   </property>
+                                   <property name="sizeHint" stdset="0">
+                                    <size>
+                                     <width>40</width>
+                                     <height>20</height>
+                                    </size>
+                                   </property>
+                                  </spacer>
+                                 </item>
+                                 <item>
+                                  <widget class="QPushButton" name="button_open_23">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>42</width>
+                                     <height>42</height>
+                                    </size>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTableWidget" name="tab_22">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>450</height>
+                                 </size>
+                                </property>
+                                <property name="font">
+                                 <font>
+                                  <family>Poppins SemiBold</family>
+                                  <pointsize>8</pointsize>
+                                  <weight>75</weight>
+                                  <bold>true</bold>
+                                 </font>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Plain</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>10</number>
+                                </property>
+                                <property name="sortingEnabled">
+                                 <bool>true</bool>
+                                </property>
+                                <attribute name="horizontalHeaderDefaultSectionSize">
+                                 <number>150</number>
+                                </attribute>
+                                <attribute name="horizontalHeaderMinimumSectionSize">
+                                 <number>50</number>
+                                </attribute>
+                                <attribute name="verticalHeaderVisible">
+                                 <bool>false</bool>
+                                </attribute>
+                                <attribute name="verticalHeaderDefaultSectionSize">
+                                 <number>80</number>
+                                </attribute>
+                                <attribute name="verticalHeaderMinimumSectionSize">
+                                 <number>40</number>
+                                </attribute>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
                          </widget>
                         </item>
                        </layout>
@@ -2550,472 +3189,8 @@ border-radius: 12px;</string>
                     </layout>
                    </widget>
                   </item>
-                  <item>
-                   <widget class="QFrame" name="frame_29">
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QGridLayout" name="gridLayout_6">
-                     <property name="leftMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="spacing">
-                      <number>5</number>
-                     </property>
-                     <item row="2" column="0">
-                      <widget class="QLabel" name="label_38">
-                       <property name="text">
-                        <string>Ipaba:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="4" column="2">
-                      <widget class="QLabel" name="label_42">
-                       <property name="text">
-                        <string>Pompéu:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="3" column="2">
-                      <widget class="QLabel" name="label_41">
-                       <property name="text">
-                        <string>Cocais:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="2" column="2">
-                      <widget class="QLabel" name="label_40">
-                       <property name="text">
-                        <string>Piracicaba:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="1" column="3">
-                      <widget class="QLineEdit" name="est_sb">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>100</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">color:white;
-border-radius:6px;</string>
-                       </property>
-                       <property name="frame">
-                        <bool>false</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="2" column="3">
-                      <widget class="QLineEdit" name="est_pi">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>100</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">color:white;
-border-radius:6px;</string>
-                       </property>
-                       <property name="frame">
-                        <bool>false</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="3" column="3">
-                      <widget class="QLineEdit" name="est_co">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>100</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">color:white;
-border-radius:6px;</string>
-                       </property>
-                       <property name="frame">
-                        <bool>false</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="4" column="3">
-                      <widget class="QLineEdit" name="est_po">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>100</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">color:white;
-border-radius:6px;</string>
-                       </property>
-                       <property name="frame">
-                        <bool>false</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="2" column="1">
-                      <widget class="QLineEdit" name="est_ip">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>100</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">color:white;
-border-radius:6px;</string>
-                       </property>
-                       <property name="frame">
-                        <bool>false</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="3" column="1">
-                      <widget class="QLineEdit" name="est_vi">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>100</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">color:white;
-border-radius:6px;</string>
-                       </property>
-                       <property name="frame">
-                        <bool>false</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="3" column="0">
-                      <widget class="QLabel" name="label_39">
-                       <property name="text">
-                        <string>Virginópolis:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="1" column="0">
-                      <widget class="QLabel" name="label_24">
-                       <property name="text">
-                        <string>Belo Oriente:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="1" column="1">
-                      <widget class="QLineEdit" name="est_bo">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>100</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">color:white;
-border-radius:6px;</string>
-                       </property>
-                       <property name="frame">
-                        <bool>false</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="4" column="0">
-                      <widget class="QLabel" name="label_27">
-                       <property name="text">
-                        <string>Sabinópolis:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="4" column="1">
-                      <widget class="QLineEdit" name="est_sa">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>100</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">color:white;
-border-radius:6px;</string>
-                       </property>
-                       <property name="frame">
-                        <bool>false</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="1" column="2">
-                      <widget class="QLabel" name="label_25">
-                       <property name="text">
-                        <string>Santa Bárbara:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="0" column="0" colspan="4">
-                      <widget class="QLabel" name="label_98">
-                       <property name="font">
-                        <font>
-                         <family>Poppins SemiBold</family>
-                         <pointsize>10</pointsize>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>Custos de Estradas Externas</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_25">
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_22">
-                     <item>
-                      <widget class="QLabel" name="label_95">
-                       <property name="font">
-                        <font>
-                         <family>Poppins SemiBold</family>
-                         <pointsize>10</pointsize>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>Custos de Transporte Rodoviário</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <spacer name="horizontalSpacer_10">
-                       <property name="orientation">
-                        <enum>Qt::Horizontal</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                      </spacer>
-                     </item>
-                     <item>
-                      <widget class="QPushButton" name="button_open_14">
-                       <property name="minimumSize">
-                        <size>
-                         <width>42</width>
-                         <height>42</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QTableWidget" name="tab_14">
-                    <property name="font">
-                     <font>
-                      <family>Poppins SemiBold</family>
-                      <pointsize>8</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Plain</enum>
-                    </property>
-                    <property name="lineWidth">
-                     <number>10</number>
-                    </property>
-                    <property name="sortingEnabled">
-                     <bool>true</bool>
-                    </property>
-                    <attribute name="horizontalHeaderDefaultSectionSize">
-                     <number>150</number>
-                    </attribute>
-                    <attribute name="horizontalHeaderMinimumSectionSize">
-                     <number>50</number>
-                    </attribute>
-                    <attribute name="verticalHeaderVisible">
-                     <bool>false</bool>
-                    </attribute>
-                    <attribute name="verticalHeaderDefaultSectionSize">
-                     <number>80</number>
-                    </attribute>
-                    <attribute name="verticalHeaderMinimumSectionSize">
-                     <number>40</number>
-                    </attribute>
-                   </widget>
-                  </item>
                  </layout>
                 </widget>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="Outros">
-             <layout class="QVBoxLayout" name="verticalLayout_21">
-              <item>
-               <widget class="QFrame" name="frame_30">
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <layout class="QHBoxLayout" name="horizontalLayout_24">
-                 <item>
-                  <widget class="QPushButton" name="pushButton_47">
-                   <property name="font">
-                    <font>
-                     <family>Poppins SemiBold</family>
-                     <pointsize>10</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Outros Custos</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <spacer name="horizontalSpacer_9">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
-                  <widget class="QPushButton" name="button_open_15">
-                   <property name="minimumSize">
-                    <size>
-                     <width>42</width>
-                     <height>42</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QTableWidget" name="tab_15">
-                <property name="font">
-                 <font>
-                  <family>Poppins SemiBold</family>
-                  <pointsize>8</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Plain</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>10</number>
-                </property>
-                <property name="sortingEnabled">
-                 <bool>true</bool>
-                </property>
-                <attribute name="horizontalHeaderDefaultSectionSize">
-                 <number>150</number>
-                </attribute>
-                <attribute name="horizontalHeaderMinimumSectionSize">
-                 <number>50</number>
-                </attribute>
-                <attribute name="verticalHeaderVisible">
-                 <bool>false</bool>
-                </attribute>
-                <attribute name="verticalHeaderDefaultSectionSize">
-                 <number>80</number>
-                </attribute>
-                <attribute name="verticalHeaderMinimumSectionSize">
-                 <number>40</number>
-                </attribute>
                </widget>
               </item>
              </layout>
@@ -3032,7 +3207,7 @@ border-radius:6px;</string>
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>1013</width>
+                   <width>1007</width>
                    <height>1087</height>
                   </rect>
                  </property>
@@ -3296,80 +3471,6 @@ border-radius: 12px;</string>
                   </item>
                  </layout>
                 </widget>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="Inventario_precorte">
-             <layout class="QVBoxLayout" name="verticalLayout_6">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QFrame" name="frame_4">
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <layout class="QHBoxLayout" name="horizontalLayout_5">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="label_19">
-                   <property name="font">
-                    <font>
-                     <family>Poppins SemiBold</family>
-                     <pointsize>10</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Inventário Florestal Pré-Corte</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <spacer name="horizontalSpacer_11">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                </layout>
                </widget>
               </item>
              </layout>

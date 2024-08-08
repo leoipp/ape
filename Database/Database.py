@@ -33,7 +33,7 @@ class Database:
         try:
             with self.connect() as conn:
                 df = pd.read_sql_query(f"SELECT * FROM {table_name}", conn)
-                # df = df.applymap(lambda x: x.upper() if isinstance(x, str) else x)
+                df = df.apply(lambda col: col.map(lambda x: x.upper() if isinstance(x, str) else "{:,.2f}".format(x).replace(',', 'X').replace('.', ',').replace('X', '.') if isinstance(x, (int, float)) else x))
                 return df
         except Exception as e:
             print(f"An error occurred: {e}")

@@ -67,6 +67,13 @@ light_theme = """
     QFrame#frame_56{
         border-radius:10px;
     }
+    QTableWidget::item {
+        border-bottom: 1px solid #d3d3d3;
+        border-top: 1px solid #d3d3d3;/* Show only bottom border for horizontal lines */
+    }
+    QTableWidget QHeaderView::section {
+        border-bottom: 2px solid red;
+    }
     QScrollBar:vertical {
         border: none;
         background: #f3f3f3;

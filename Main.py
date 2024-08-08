@@ -107,11 +107,9 @@ class MainWindow(QMainWindow):
         # Connect the button's clicked signal to the show_menu method
         self.main_button_projeto.clicked.connect(lambda: self.show_menu(self.main_button_projeto, self.menu_projeto))
         self.main_button_producao.clicked.connect(lambda: self.show_menu(self.main_button_producao, self.menu_producao))
-        self.main_button_cadastro.clicked.connect(lambda: self.show_menu(self.main_button_cadastro, self.menu_cadastro))
-        self.main_button_custos.clicked.connect(lambda: self.show_menu(self.main_button_custos, self.menu_custos))
 
         self.toggle_button.clicked.connect(self.switch_theme)
-        self.main_button_resultados.clicked.connect(lambda: self.dados_empilhados.setCurrentIndex(11))
+        self.main_button_resultados.clicked.connect(lambda: self.dados_empilhados.setCurrentIndex(2))
         self.main_button_home.clicked.connect(lambda: self.dados_empilhados.setCurrentIndex(0))
         # List of button names
         button_names = {
@@ -171,19 +169,8 @@ class MainWindow(QMainWindow):
         self.add_custom_menu_item('Database SQL', self.option3_selected, self.menu_projeto)
         self.add_custom_menu_item('Configurações', self.option3_selected, self.menu_projeto)
 
-        self.add_custom_menu_item('Inventário Florestal Contínuo', lambda: self.dados_empilhados.setCurrentIndex(1), self.menu_producao)
-        self.add_custom_menu_item('Inventário Florestal Pré-Corte', lambda: self.dados_empilhados.setCurrentIndex(12), self.menu_producao)
-        self.add_custom_menu_item('Curva de Produtividade', lambda: self.dados_empilhados.setCurrentIndex(2), self.menu_producao)
-        self.add_custom_menu_item('RT Material Genético', lambda: self.dados_empilhados.setCurrentIndex(3), self.menu_producao)
-
-        self.add_custom_menu_item('Orçamento', lambda: self.dados_empilhados.setCurrentIndex(4), self.menu_cadastro)
-        self.add_custom_menu_item('Base Cadastral', lambda: self.dados_empilhados.setCurrentIndex(6), self.menu_cadastro)
-        self.add_custom_menu_item('Base Inclinação', lambda: self.dados_empilhados.setCurrentIndex(5), self.menu_cadastro)
-
-        self.add_custom_menu_item('Silvicultura', lambda: self.dados_empilhados.setCurrentIndex(7), self.menu_custos)
-        self.add_custom_menu_item('Colheita', lambda: self.dados_empilhados.setCurrentIndex(8), self.menu_custos)
-        self.add_custom_menu_item('Transporte', lambda: self.dados_empilhados.setCurrentIndex(9), self.menu_custos)
-        self.add_custom_menu_item('Outros', lambda: self.dados_empilhados.setCurrentIndex(10), self.menu_custos)
+        self.add_custom_menu_item('Importação Cadastral', lambda: self.dados_empilhados.setCurrentIndex(1), self.menu_producao)
+        self.add_custom_menu_item('Consistência', lambda: self.dados_empilhados.setCurrentIndex(0), self.menu_producao)
 
     def add_custom_menu_item(self, text, callback, menu):
         action = QWidgetAction(menu)
@@ -211,8 +198,6 @@ class MainWindow(QMainWindow):
                 if names and selected_headers:
                     df_selected = df[selected_headers]
                     df_selected.columns = names
-                    df_selected = df_selected.apply(
-                        lambda col: col.map(lambda x: x.upper() if isinstance(x, str) else x))
                     db = Database(self.label_base.text())
                     db.create_table_from_dataframe(df_selected, table_name)
                     self.populate_table_from_db(db, table_name, table_widget)
@@ -225,7 +210,9 @@ class MainWindow(QMainWindow):
         for row_number, row_data in enumerate(df.values):
             table_widget.insertRow(row_number)
             for column_number, data in enumerate(row_data):
-                table_widget.setItem(row_number, column_number, QTableWidgetItem(str(data)))
+                item = QTableWidgetItem(str(data))
+                item.setTextAlignment(Qt.AlignCenter)
+                table_widget.setItem(row_number, column_number, item)
 
     def populate_table_from_db(self, db, table_name, table_widget):
         df = db.fetch_all(table_name)
