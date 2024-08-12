@@ -1,5 +1,19 @@
 <RCC>
   <qresource prefix="svg">
+    <file>Style=bold (11).svg</file>
+    <file>Style=bold (10).svg</file>
+    <file>Style=bold (9).svg</file>
+    <file>Style=bold (8).svg</file>
+    <file>Style=bold (7).svg</file>
+    <file>Style=bold (6).svg</file>
+    <file>Style=bold (5).svg</file>
+    <file>Style=bold (4).svg</file>
+    <file>Style=linear (1).svg</file>
+    <file>Style=linear.svg</file>
+    <file>Style=outline (3).svg</file>
+    <file>Style=outline (2).svg</file>
+    <file>Style=outline (1).svg</file>
+    <file>Style=outline.svg</file>
     <file>Country=brazil.svg</file>
     <file>Country=japan.svg</file>
     <file>Style=bold (3).svg</file>

@@ -1,19 +1,100 @@
 # Define two themes
 light_theme = """
+    QPushButton#toggle_button {
+        background-image: url(:/svg/Style=outline (3).svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+    }
+    
     QMainWindow {
+        background-color: #F1F2F6;
+    }
+    QFrame#Header,
+    QFrame#Footer {
         background-color: #FFFFFF;
     }
-    QPushButton#main_button_home {
-        background-image: url(:/svg/Style=bold (2).svg);
+    QPushButton#menu {
+        background-image: url(:/svg/Style=outline.svg);
         background-repeat: no-repeat;
         background-position: center;
         border: none;
     }
-    QPushButton#main_button_home:hover {
-        background-image: url(:/svg/Style=bold (3).svg);
+    QFrame#frame_10,
+    QFrame#frame_12,
+    QFrame#frame_7,
+    QFrame#frame_13,
+    QFrame#frame_51,
+    QFrame#frame_9,
+    QFrame#frame_54,
+    QFrame#frame_60,
+    QFrame#frame_73,
+    QFrame#frame_75,
+    QFrame#frame_43,
+    QFrame#frame_42,
+    QFrame#frame_52 {
+        background-color: #FFFFFF;
+        border-radius:10px;
+    }
+    QPushButton#button_consistencia {
+        background-image: url(:/svg/Style=linear (1).svg);
+        background-repeat: no-repeat;
+        background-position: left;
+        border: none;
+        color: white;
+        padding: 6px 5px; /* Apply padding consistently */
+    }
+    
+    QPushButton#button_consistencia:hover {
+        background-color: #D0D4D2; /* Change background color on hover */
+    }
+    QPushButton#button_inicio:hover,
+    QPushButton#button_dados:hover,
+    QPushButton#button_resultados:hover {
+        background-color: rgba(22, 39, 28, 0.2);
+    }
+    QPushButton#salvar_1,
+    QPushButton#salvar_2 {
+        background-image: url(:/svg/Style=bold (7).svg);
         background-repeat: no-repeat;
         background-position: center;
         border: none;
+    }
+    QPushButton#salvar_1:hover,
+    QPushButton#salvar_2:hover {
+        background-image: url(:/svg/Style=bold (4).svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+    }
+    QPushButton#r_1 {
+        background-image: url(:/svg/Style=bold (10).svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+    }
+    QPushButton#r_1:hover {
+        background-image: url(:/svg/Style=bold (11).svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+    }
+    QPushButton#b1:hover,
+    QPushButton#b2:hover,
+    QPushButton#b3:hover,
+    QPushButton#b4:hover,
+    QPushButton#b5:hover,
+    QPushButton#b6:hover,
+    QPushButton#b7:hover,
+    QPushButton#b8:hover,
+    QPushButton#b9:hover,
+    QPushButton#b10:hover,
+    QPushButton#b11:hover {
+        color: #16271C;
+        border-top: none;       
+        border-left: none;         
+        border-right: none;         
+        border-bottom: 3px solid #16271C;
     }
     QPushButton#button_open_1,
     QPushButton#button_open_2,
@@ -57,19 +138,91 @@ light_theme = """
         background-position: center;
         border: none;
     }
-    QFrame {
-        background-color: #FFFFFF;
+    QLineEdit#cr,
+    QLineEdit#pe,
+    QLineEdit#sa,
+    QLineEdit#ca,
+    QLineEdit#ce,
+    QLineEdit#al,
+    QLineEdit#it,
+    QLineEdit#pc,
+    QLineEdit#sb,
+    QLineEdit#pd,
+    QLineEdit#po,
+    QLineEdit#ma,
+    QLineEdit#ba,
+    QLineEdit#vi,
+    QLineEdit#lineEdit_5{
+        background-color: rgba(22, 39, 28, 0.2);
+        border-radius: 10px;
     }
-    QFrame#frame_50,
-    QFrame#frame_49,
-    QFrame#frame_53,
-    QFrame#frame_55,
-    QFrame#frame_56{
-        border-radius:10px;
+    QLineEdit#cr:focus,
+    QLineEdit#pe:focus,
+    QLineEdit#sa:focus,
+    QLineEdit#ca:focus,
+    QLineEdit#ce:focus,
+    QLineEdit#al:focus,
+    QLineEdit#it:focus,
+    QLineEdit#pc:focus,
+    QLineEdit#sb:focus,
+    QLineEdit#pd:focus,
+    QLineEdit#po:focus,
+    QLineEdit#ma:focus,
+    QLineEdit#ba:focus,
+    QLineEdit#vi:focus,
+    QLineEdit#lineEdit_5:focus {
+        background-color: rgb(22, 39, 28, .5);
+        border-radius: 10px;
+    }
+    
+    QLineEdit#search_1,
+    QLineEdit#search_2,
+    QLineEdit#search_3,
+    QLineEdit#search_4,
+    QLineEdit#search_5,
+    QLineEdit#search_6,
+    QLineEdit#search_7,
+    QLineEdit#search_8,
+    QLineEdit#search_9,
+    QLineEdit#search_10 {
+        background-image: url(:/svg/Style=outline (1).svg);
+        background-position: right; /* Attempt to position image with padding */
+        background-repeat: no-repeat;
+        background-color: rgba(22, 39, 28, 0.2);
+        border-radius: 10px;
+    }
+    QLineEdit#search_1:focus,
+    QLineEdit#search_2:focus,
+    QLineEdit#search_3:focus,
+    QLineEdit#search_4:focus,
+    QLineEdit#search_5:focus,
+    QLineEdit#search_6:focus,
+    QLineEdit#search_7:focus,
+    QLineEdit#search_8:focus,
+    QLineEdit#search_9:focus,
+    QLineEdit#search_10:focus {
+        background-image: url(:/svg/Style=outline (1).svg);
+        background-color: rgb(22, 39, 28, .5); /* Keep the background color the same */
+        border-radius: 10px;
+        padding-right: 5px;
+    }
+    
+    QFrame#side_bar {
+        background-color: #16271C;
+    }
+    QTableWidget {
+        border: 2px solid #FFFFFF;
+        border-radius: 10px;
+        background-clip: border;
+        background-color: #FFFFFF; 
+    }
+    QTableWidget QTableCornerButton::section {
+        border-radius: 10px;
+        background-color: transparent;
+        border: none;
     }
     QTableWidget::item {
         border-bottom: 1px solid #d3d3d3;
-        border-top: 1px solid #d3d3d3;/* Show only bottom border for horizontal lines */
     }
     QTableWidget QHeaderView::section {
         border-bottom: 2px solid red;
@@ -81,7 +234,7 @@ light_theme = """
         margin: 5px 0 5px 0;
     }
     QScrollBar::handle:vertical {
-        background: #253d2c;
+        background: #16271C;
         min-height: 100px;
         border-radius: 7px;
         margin: 2px;
@@ -112,16 +265,39 @@ light_theme = """
 """
 
 dark_theme = """
-    QMainWindow {
-        background-color: #121212
-    }
+    QPushButton#toggle_button {
+            background-image: url(:/svg/Style=outline (2).svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            border: none;
+        }
     QPushButton {
         background-color: #5e5e5e;
         padding: 5px;
         font: 'Corbel', 12px;
         color: white;
     }
-    QFrame {
-        background-color: #5e5e5e;
+    QWidget#Main_Background {
+        background-color: #131313;
+    }
+    QFrame#frame_10,
+    QFrame#frame_12,
+    QFrame#frame_7,
+    QFrame#frame_13,
+    QFrame#frame_51,
+    QFrame#frame_9,
+    QFrame#frame_54,
+    QFrame#frame_60,
+    QFrame#frame_73,
+    QFrame#frame_75,
+    QFrame#frame_43,
+    QFrame#frame_42,
+    QFrame#frame_52 {
+        background-color: #000000;
+        border-radius:10px;
+    }
+    
+    QFrame#side_bar {
+        background-color: #DDDED7;
     }
 """
