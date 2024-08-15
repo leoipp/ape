@@ -1,11 +1,14 @@
+import sqlite3
 import sys
 from functools import partial
 
 from PyQt5.QtGui import QFont, QColor, QPixmap
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QMenu, QWidget, QLabel, QVBoxLayout, \
-    QWidgetAction, QSizePolicy, QGraphicsDropShadowEffect, QTableWidgetItem, QHeaderView
+    QWidgetAction, QSizePolicy, QGraphicsDropShadowEffect, QTableWidgetItem, QHeaderView, QComboBox, QLineEdit
 from PyQt5.QtCore import Qt
 from PyQt5 import uic
+
+from Database.Consistencia import Consist
 from Database.Database import Database
 from Gui.themes import *
 from Dialogs.Open import SheetSelectionDialog, HeaderSelectionDialog
@@ -75,17 +78,25 @@ class CustomMenuItem(QWidget):
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('teste.ui', self)  # Load the .ui file
+        uic.loadUi('Gui/MainUI.ui', self)  # Load the .ui file
+
         self.side_bar.hide()
         self.set_theme('light')
 
         self.create_db = CreateDataBase(self)
         self.open_db = OpenDataBase(self)
 
+        comboBoxes = [
+            self.bo, self.ip, self.vi_2, self.sa_2,
+            self.sb_2, self.pi, self.co, self.po_2
+        ]
+        for c in comboBoxes:
+            c.addItems(['Região Alta', 'Região Baixa'])
         tabs = [
             self.tab_1, self.tab_2, self.tab_3, self.tab_4, self.tab_5,
             self.tab_6, self.tab_7, self.tab_8, self.tab_9, self.tab_10,
-            self.tab_11, self.tab_12, self.tab_13, self.tab_14, self.tab_15
+            self.tab_11, self.tab_12, self.tab_13, self.tab_14, self.tab_15,
+            self.tab_22, self.tab_consist
         ]
         for t in tabs:
             t.setShowGrid(False)
@@ -101,7 +112,10 @@ class MainWindow(QMainWindow):
         self.b9.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(8))
         self.b10.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(10))
         self.b11.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(9))
-        self.button_dados.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
+        self.button_dados.clicked.connect(lambda: self.stackedWidget_2.setCurrentIndex(0))
+        self.button_consistencia.clicked.connect(lambda: self.stackedWidget_2.setCurrentIndex(1))
+
+        self.button_consistir.clicked.connect(lambda: self.consist_bt())
 
         # Create a custom menu
         self.menu_projeto = CustomMenu(self)
@@ -114,21 +128,21 @@ class MainWindow(QMainWindow):
 
         # List of button names
         button_names = {
-            'button_open_1': ('IFC', self.tab_1, ['Talhao', 'DT_Medicao', 'Fustes', 'VTCC', 'Area']),
-            'button_open_2': ('CurvaProdutividade', self.tab_3, ['Idade', 'Sabinópolis', 'Cocais', 'Piracicaba', 'Santa Bárbara', 'Belo Oriente', 'Ipaba', 'Pompéu', 'Virginópolis']),
-            'button_open_3': ('RTMaterialGenetico', self.tab_4, ['DCR_MatGen', 'RegAlta', 'RegBaixaEncosta', 'RegBaixaBaixada']),
-            'button_open_4': ('Orcamento', self.tab_5, ['TalhaoAtual', 'TalhaoReferencia']),
-            'button_open_5': ('ClssesInclinacao', self.tab_6, ['Regiao', 'Area', 'HA0_28', 'HA29_38', 'HA38_MAIS', 'PCT0_28', 'PCT29_38', 'PCT38_MAIS']),
-            'button_open_6': ('CadastroFlorestal', self.tab_7, ['Talhao', 'DCR_Projeto', 'DT_Plantio', 'ESP', 'DCR_MatGen', 'Area', 'DIST_LP', 'DIST_PFRod', 'DIST_PFFer', 'DIST_LFRod', 'DIST_Total']),
-            'button_open_7': (),
+            'button_open_1': ('IFC', self.tab_1, ['Talhao', 'DT_Medicao', 'Fustes', 'VTCC', 'Area'], self.label_4),
+            'button_open_2': ('CurvaProdutividade', self.tab_3, ['Idade', 'Sabinópolis', 'Cocais', 'Piracicaba', 'Santa Bárbara', 'Belo Oriente', 'Ipaba', 'Pompéu', 'Virginópolis'], self.label_5),
+            'button_open_3': ('RTMaterialGenetico', self.tab_4, ['DCR_MatGen', 'RegAlta', 'RegBaixaEncosta', 'RegBaixaBaixada'], self.label_10),
+            'button_open_4': ('Orcamento', self.tab_5, ['TalhaoAtual', 'TalhaoReferencia'], self.label_9),
+            'button_open_5': ('ClassesInclinacao', self.tab_6, ['Regiao', 'Area', 'HA0_28', 'HA29_38', 'HA38_MAIS', 'PCT0_28', 'PCT29_38', 'PCT38_MAIS'], self.label_8),
+            'button_open_6': ('CadastroFlorestal', self.tab_7, ['Talhao', 'DCR_Projeto', 'DT_Plantio', 'ESP', 'DCR_MatGen', 'Area', 'DIST_LP', 'DIST_PFRod', 'DIST_PFFer', 'DIST_LFRod', 'DIST_Total'], self.label_11),
+            'button_open_23': ('CustosSilvicultura', self.tab_22, ['Fase', 'ANO', 'BO', 'IP', 'PO', 'CO', 'PI', 'SB', 'SA', 'VI'], self.label_13),
             'button_open_8': ('CustosColheitaPI', self.tab_8, ['PROD', 'VMI', 'PD', 'GW']),
             'button_open_9': ('CustosColheitaPO', self.tab_9, ['PROD', 'VMI', 'PD', 'GW']),
             'button_open_10': ('CustosColheitaCO', self.tab_10, ['PROD', 'VMI', 'PD', 'GW']),
             'button_open_11': ('CustosColheitaGN', self.tab_11, ['PROD', 'VMI', 'PD', 'GW']),
             'button_open_12': ('CustosColheitaBOIP', self.tab_12, ['PROD', 'VMI', 'PD', 'GW']),
             'button_open_13': ('CustosColheitaSB', self.tab_13, ['PROD', 'VMI', 'PD', 'GW']),
-            'button_open_14': ('CustosTransRod', self.tab_14, ['Distancia', 'Sabinópolis', 'Cocais', 'Piracicaba', 'Santa Bárbara', 'Belo Oriente', 'Ipaba', 'Pompéu', 'Virginópolis']),
-            'button_open_15': ('OutrosCustos', self.tab_15, ['Regiao', 'ApoioColheita', 'EstInterna', 'EstExterna', 'MovPatio', 'ADM', 'Taxas']),
+            'button_open_14': ('CustosTransRod', self.tab_14, ['Distancia', 'Sabinópolis', 'Cocais', 'Piracicaba', 'Santa Bárbara', 'Belo Oriente', 'Ipaba', 'Pompéu', 'Virginópolis'], self.label_12),
+            'button_open_15': ('OutrosCustos', self.tab_15, ['Regiao', 'ApoioColheita', 'EstInterna', 'EstExterna', 'MovPatio', 'ADM', 'Taxas'], self.label_15),
             'button_open_16': ('IFPC', self.tab_2, ['Talhao', 'DT_Medicao', 'Fustes', 'VTCC', 'Area'], self.label_3)
         }
         # Connect each button's clicked signal to the openFileDialog method
@@ -148,6 +162,7 @@ class MainWindow(QMainWindow):
         self.search_8.textChanged.connect(lambda text: self.search_in_table(text, self.tab_14))
         self.search_9.textChanged.connect(lambda text: self.search_in_table(text, self.tab_22))
         self.search_10.textChanged.connect(lambda text: self.search_in_table(text, self.tab_15))
+        self.search_11.textChanged.connect(lambda text: self.search_in_table(text, self.tab_consist))
 
         self.cr.textChanged.connect(
             lambda: self.label_38.setText(self.prod_min(self.cr.text(), self.lineEdit_5.text())))
@@ -188,15 +203,81 @@ class MainWindow(QMainWindow):
                              ['IT', self.label_44], ['PC', self.label_45],
                              ['SB', self.label_46], ['PD', self.label_47],
                              ['PO', self.label_48], ['MA', self.label_49],
-                             ['BA', self.label_50], ['VI', self.label_51]])
+                             ['BA', self.label_50], ['VI', self.label_51]],
+                            'ProdMin'),
+            self.salvar_2: (['Regiao', 'Elev'],
+                            [
+                                ['BO', self.bo],
+                                ['IP', self.ip],
+                                ['VI', self.vi_2],
+                                ['SA', self.sa_2],
+                                ['SB', self.sb_2],
+                                ['PI', self.pi],
+                                ['CO', self.co],
+                                ['PO', self.po_2]
+                            ], 'Elevacao'),
+            self.salvar_3: (
+                ['Regiao', 'Custo'],
+                [
+                    ['SB', self.lineEdit_8],
+                    ['PI', self.lineEdit_7]
+                ], 'CustoFerr'
+            ),
+            self.salvar_4: (
+                ['Regiao', 'Custo'],
+                [
+                    ['SB', self.lineEdit_10],
+                    ['PI', self.lineEdit_9]
+                ], 'CustoMovPatio'
+            ),
+            self.salvar_5: (
+                ['Regiao', 'Custo'],
+                [
+                    ['BO', self.est_bo_2],
+                    ['IP', self.est_ip_2],
+                    ['VI', self.est_vi_2],
+                    ['SA', self.est_sa_2],
+                    ['SB', self.est_sb_2],
+                    ['PI', self.est_pi_2],
+                    ['CO', self.est_co_2],
+                    ['PO', self.est_po_2]
+                ], 'CustoEstExterna'
+            ),
+            self.salvar_6: (
+                ['Regiao', 'Custo'],
+                [
+                    ['BO', self.e_bo],
+                    ['IP', self.e_ip],
+                    ['PO', self.e_po],
+                    ['CO', self.e_co],
+                    ['PI', self.e_pi],
+                    ['SB', self.e_sb],
+                    ['SA', self.e_sa],
+                    ['VI', self.e_vi]
+                ], 'CustoTerra'
+            )
+
         }
+        for k, (headers, labels, tabela) in tabs_texto.items():
+            k.clicked.connect(partial(self.prod_calc_click, headers, labels, tabela))
 
-        for k, (headers, labels) in tabs_texto.items():
-            k.clicked.connect(partial(self.prod_calc_click, headers, labels))
+    def prod_calc_click(self, headers, labels, tabela):
+        data = []
 
-    def prod_calc_click(self, headers, labels):
+        for label_id, label in labels:
+            if isinstance(label, QLabel):
+                text = float(label.text())
+            elif isinstance(label, QComboBox):
+                text = label.currentText()
+            elif isinstance(label, QLineEdit):
+                text = float(label.text())
+            else:
+                text = ''  # Default value if it's neither QLabel, QComboBox, nor QLineEdit
+
+            data.append([label_id, text])
+
         Database(self.label_base.text()).create_table_with_data(
-            'ProdMin', headers, [[label_id, label.text()] for label_id, label in labels]
+            tabela, headers, data
         )
 
     def set_theme(self, theme_name):
@@ -335,6 +416,30 @@ class MainWindow(QMainWindow):
         self.label_49.setText(self.prod_min(self.ma.text(), self.lineEdit_5.text()))
         self.label_50.setText(self.prod_min(self.ba.text(), self.lineEdit_5.text()))
         self.label_51.setText(self.prod_min(self.vi.text(), self.lineEdit_5.text()))
+
+    def consist_bt(self):
+        try:
+            db = Consist(self.label_base.text())
+            df = db.pipeline()
+            self.populateTableWidget(df, self.tab_consist)
+            self.label_25.setText(str(df.shape))
+            vals = db.print_ajuste_base('apex_base_1')
+            labs = [
+                self.label_131,
+                self.label_132,
+                self.label_133,
+                self.label_134,
+                self.label_138,
+                self.label_136,
+                self.label_137,
+                self.label_139,
+                self.label_135,
+                self.label_141
+            ]
+            for label, val in zip(labs, vals):
+                label.setText(str(val))
+        except sqlite3.OperationalError as op:
+            print(op)
 
 
 if __name__ == '__main__':

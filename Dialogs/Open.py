@@ -6,7 +6,8 @@ import pandas as pd
 class SheetSelectionDialog(QDialog):
     def __init__(self, sheets, parent=None):
         super(SheetSelectionDialog, self).__init__(parent)
-        self.setWindowTitle("Select Sheet")
+        self.setWindowTitle("Selecione a Planilha")
+        self.setStyleSheet(parent.styleSheet())
         self.layout = QVBoxLayout(self)
 
         self.listWidgetSheets = QListWidget(self)
@@ -86,7 +87,7 @@ class NumberSelectionDialog(QDialog):
 class HeaderSelectionDialog(QDialog):
     def __init__(self, headers, header_names, parent=None):
         super(HeaderSelectionDialog, self).__init__(parent)
-        self.setWindowTitle("Select Headers")
+        self.setWindowTitle("Selecione as Colunas")
         self.layout = QVBoxLayout(self)
 
         self.formLayout = QFormLayout()

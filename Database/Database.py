@@ -17,6 +17,8 @@ class Database:
         :param table_name: The name of the table to be created.
         """
         try:
+            # Convert all string elements in the DataFrame to uppercase
+            df = df.apply(lambda col: col.map(lambda x: x.upper() if isinstance(x, str) else x))
             with self.connect() as conn:
                 df.to_sql(table_name, conn, if_exists='replace', index=False)
                 print(f"Table '{table_name}' created successfully.")

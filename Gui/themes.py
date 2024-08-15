@@ -6,9 +6,30 @@ light_theme = """
         background-position: center;
         border: none;
     }
-    
     QMainWindow {
         background-color: #F1F2F6;
+    }      
+    QComboBox {
+        background-color: rgba(22, 39, 28, 0.2);
+        border-radius: 10px;
+        padding: 5px;
+        font-family: 'Poppins';
+        font-size: 10pt;
+    }
+    QComboBox::drop-down {
+        subcontrol-origin: padding;
+        subcontrol-position: top right;
+        width: 25px; /* Adjust width of arrow button */
+        border-left-width: 1px;
+        border-left-color: rgba(22, 39, 28, 0.4); /* Match border color */
+        border-left-style: solid; /* Solid border */
+        border-top-right-radius: 10px; /* Match the corner radius */
+        border-bottom-right-radius: 10px; /* Match the corner radius */
+    }
+    QComboBox::down-arrow {
+        image: url(:/svg/Style=bold (12).svg); /* Customize the arrow icon if needed */
+        width: 12px; /* Adjust the arrow size */
+        height: 12px;
     }
     QFrame#Header,
     QFrame#Footer {
@@ -32,7 +53,13 @@ light_theme = """
     QFrame#frame_75,
     QFrame#frame_43,
     QFrame#frame_42,
-    QFrame#frame_52 {
+    QFrame#frame_52,
+    QFrame#frame_44,
+    QFrame#frame_27,
+    QFrame#frame_61,
+    QFrame#frame_3,
+    QFrame#frame_6,
+    QFrame#frame_76 {
         background-color: #FFFFFF;
         border-radius:10px;
     }
@@ -53,27 +80,90 @@ light_theme = """
     QPushButton#button_resultados:hover {
         background-color: rgba(22, 39, 28, 0.2);
     }
+    QPushButton#button_consistir {
+        background-image: url(:/svg/Style=bold (13).svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+    }
+    QPushButton#button_consistir:hover {
+        background-image: url(:/svg/Style=bold (14).svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+    }
+    QPushButton#button_reprocessar {
+        background-image: url(:/svg/save-2.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+    }
+    QPushButton#button_reprocessar:hover {
+        background-image: url(:/svg/save-22.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+    }
+    QPushButton#button_exportar {
+        background-image: url(:/svg/Style=bold (15).svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+    }
+    QPushButton#button_exportar:hover {
+        background-image: url(:/svg/Style=bold (16).svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+    }
     QPushButton#salvar_1,
-    QPushButton#salvar_2 {
+    QPushButton#salvar_2,
+    QPushButton#salvar_3,
+    QPushButton#salvar_4,
+    QPushButton#salvar_5,
+    QPushButton#salvar_6 {
         background-image: url(:/svg/Style=bold (7).svg);
         background-repeat: no-repeat;
         background-position: center;
         border: none;
     }
     QPushButton#salvar_1:hover,
-    QPushButton#salvar_2:hover {
+    QPushButton#salvar_2:hover,
+    QPushButton#salvar_3:hover,
+    QPushButton#salvar_4:hover,
+    QPushButton#salvar_5:hover,
+    QPushButton#salvar_6:hover{
         background-image: url(:/svg/Style=bold (4).svg);
         background-repeat: no-repeat;
         background-position: center;
         border: none;
     }
-    QPushButton#r_1 {
+    QPushButton#r_1,
+    QPushButton#r_2,
+    QPushButton#r_3,
+    QPushButton#r_4,
+    QPushButton#r_5,
+    QPushButton#r_6,
+    QPushButton#r_7,
+    QPushButton#r_8,
+    QPushButton#r_9,
+    QPushButton#r_10 {
         background-image: url(:/svg/Style=bold (10).svg);
         background-repeat: no-repeat;
         background-position: center;
         border: none;
     }
-    QPushButton#r_1:hover {
+    QPushButton#r_1:hover,
+    QPushButton#r_2:hover,
+    QPushButton#r_3:hover,
+    QPushButton#r_4:hover,
+    QPushButton#r_5:hover,
+    QPushButton#r_6:hover,
+    QPushButton#r_7:hover,
+    QPushButton#r_8:hover,
+    QPushButton#r_9:hover,
+    QPushButton#r_10:hover
+    {
         background-image: url(:/svg/Style=bold (11).svg);
         background-repeat: no-repeat;
         background-position: center;
@@ -111,7 +201,8 @@ light_theme = """
     QPushButton#button_open_13,
     QPushButton#button_open_14,
     QPushButton#button_open_15,
-    QPushButton#button_open_16 {
+    QPushButton#button_open_16,
+    QPushButton#button_open_23 {
         background-image: url(:/svg/Style=bold.svg);
         background-repeat: no-repeat;
         background-position: center;
@@ -132,7 +223,8 @@ light_theme = """
     QPushButton#button_open_13:hover,
     QPushButton#button_open_14:hover,
     QPushButton#button_open_15:hover,
-    QPushButton#button_open_16:hover {
+    QPushButton#button_open_16:hover,
+    QPushButton#button_open_23:hover {
         background-image: url(:/svg/Style=bold (1).svg);
         background-repeat: no-repeat;
         background-position: center;
@@ -152,10 +244,38 @@ light_theme = """
     QLineEdit#ma,
     QLineEdit#ba,
     QLineEdit#vi,
-    QLineEdit#lineEdit_5{
+    QLineEdit#lineEdit_5,
+    QLineEdit#lineEdit_7,
+    QLineEdit#lineEdit_8,
+    QLineEdit#lineEdit_9,
+    QLineEdit#lineEdit_10,
+    QLineEdit#est_bo_2,
+    QLineEdit#est_ip_2,
+    QLineEdit#est_co_2,
+    QLineEdit#est_pi_2,
+    QLineEdit#est_po_2,
+    QLineEdit#est_sa_2,
+    QLineEdit#est_sb_2,
+    QLineEdit#est_vi_2,
+    QLineEdit#e_bo,
+    QLineEdit#e_ip,
+    QLineEdit#e_po,
+    QLineEdit#e_co,
+    QLineEdit#e_pi,
+    QLineEdit#e_sb,
+    QLineEdit#e_sa,
+    QLineEdit#e_vi {
         background-color: rgba(22, 39, 28, 0.2);
         border-radius: 10px;
     }
+    QLineEdit#est_bo_2:focus,
+    QLineEdit#est_ip_2:focus,
+    QLineEdit#est_co_2:focus,
+    QLineEdit#est_pi_2:focus,
+    QLineEdit#est_po_2:focus,
+    QLineEdit#est_sa_2:focus,
+    QLineEdit#est_sb_2:focus,
+    QLineEdit#est_vi_2:focus,
     QLineEdit#cr:focus,
     QLineEdit#pe:focus,
     QLineEdit#sa:focus,
@@ -170,11 +290,29 @@ light_theme = """
     QLineEdit#ma:focus,
     QLineEdit#ba:focus,
     QLineEdit#vi:focus,
-    QLineEdit#lineEdit_5:focus {
+    QLineEdit#lineEdit_5:focus,
+    QLineEdit#lineEdit_7:focus,
+    QLineEdit#lineEdit_8:focus,
+    QLineEdit#lineEdit_9:focus,
+    QLineEdit#lineEdit_10:focus,
+    QLineEdit#e_bo:focus,
+    QLineEdit#e_ip:focus,
+    QLineEdit#e_po:focus,
+    QLineEdit#e_co:focus,
+    QLineEdit#e_pi:focus,
+    QLineEdit#e_sb:focus,
+    QLineEdit#e_sa:focus,
+    QLineEdit#e_vi:focus {
         background-color: rgb(22, 39, 28, .5);
         border-radius: 10px;
     }
-    
+    QLabel#teste {
+        background-image: url(:/svg/Style=outline (1).svg);
+        background-position: center; /* Attempt to position image with padding */
+        background-repeat: no-repeat;
+        background-color: rgba(22, 39, 28, 0.2);
+        border-radius: 20px;
+    }
     QLineEdit#search_1,
     QLineEdit#search_2,
     QLineEdit#search_3,
@@ -184,12 +322,14 @@ light_theme = """
     QLineEdit#search_7,
     QLineEdit#search_8,
     QLineEdit#search_9,
-    QLineEdit#search_10 {
+    QLineEdit#search_10,
+    QLineEdit#search_11{
         background-image: url(:/svg/Style=outline (1).svg);
-        background-position: right; /* Attempt to position image with padding */
+        background-position: right center; /* Attempt to position image with padding */
         background-repeat: no-repeat;
         background-color: rgba(22, 39, 28, 0.2);
         border-radius: 10px;
+        padding-right: 3px;
     }
     QLineEdit#search_1:focus,
     QLineEdit#search_2:focus,
@@ -200,7 +340,8 @@ light_theme = """
     QLineEdit#search_7:focus,
     QLineEdit#search_8:focus,
     QLineEdit#search_9:focus,
-    QLineEdit#search_10:focus {
+    QLineEdit#search_10:focus,
+    QLineEdit#search_11:focus {
         background-image: url(:/svg/Style=outline (1).svg);
         background-color: rgb(22, 39, 28, .5); /* Keep the background color the same */
         border-radius: 10px;
@@ -224,9 +365,18 @@ light_theme = """
     QTableWidget::item {
         border-bottom: 1px solid #d3d3d3;
     }
-    QTableWidget QHeaderView::section {
-        border-bottom: 2px solid red;
-    }
+    
+    QHeaderView::section {
+                border-bottom: 2px solid #d3d3d3;
+                border-left: none;       
+                border-right: none;           
+                border-top: none;    
+                font-family: 'Poppins SemiBold';
+                font-size: 8pt;  
+                font-weight: bold;
+                background: #FFFFFF;  
+            }
+
     QScrollBar:vertical {
         border: none;
         background: #f3f3f3;

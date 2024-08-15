@@ -1,5 +1,13 @@
 <RCC>
   <qresource prefix="svg">
+    <file>save-22.svg</file>
+    <file>save-2.svg</file>
+    <file>Style=bold (16).svg</file>
+    <file>Style=bold (15).svg</file>
+    <file>Style=bold (14).svg</file>
+    <file>Style=bold (13).svg</file>
+    <file>Style=bold (12).svg</file>
+    <file>Style=linear (2).svg</file>
     <file>Style=bold (11).svg</file>
     <file>Style=bold (10).svg</file>
     <file>Style=bold (9).svg</file>
