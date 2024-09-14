@@ -1,5 +1,42 @@
 <RCC>
   <qresource prefix="svg">
+    <file>Style=outline123123.svg</file>
+    <file>error.svg</file>
+    <file>sucess.svg</file>
+    <file>firstline.svg</file>
+    <file>firstline1.svg</file>
+    <file>Style=linear (6).svg</file>
+    <file>Style=linear (5).svg</file>
+    <file>Style=linear (4).svg</file>
+    <file>Style=linear (3).svg</file>
+    <file>Style=outline (16).svg</file>
+    <file>Style=outline (15).svg</file>
+    <file>Style=bold (32).svg</file>
+    <file>Style=bold (31).svg</file>
+    <file>Style=outline (14).svg</file>
+    <file>Style=outline (13).svg</file>
+    <file>Style=outline (12).svg</file>
+    <file>Style=outline (11).svg</file>
+    <file>Style=outline (10).svg</file>
+    <file>Style=outline (9).svg</file>
+    <file>Style=outline (8).svg</file>
+    <file>Style=bold (30).svg</file>
+    <file>Style=bold (29).svg</file>
+    <file>Style=outline (7).svg</file>
+    <file>Style=outline (6).svg</file>
+    <file>Style=bold (28).svg</file>
+    <file>Style=bold (27).svg</file>
+    <file>Style=bold (26).svg</file>
+    <file>Style=bold (24).svg</file>
+    <file>Style=bold (23).svg</file>
+    <file>Style=outline (5).svg</file>
+    <file>Style=outline (4).svg</file>
+    <file>Style=bold (22).svg</file>
+    <file>Style=bold (21).svg</file>
+    <file>Style=bold (18).svg</file>
+    <file>Style=bold (20).svg</file>
+    <file>Style=bold (19).svg</file>
+    <file>Style=bold (17).svg</file>
     <file>save-22.svg</file>
     <file>save-2.svg</file>
     <file>Style=bold (16).svg</file>

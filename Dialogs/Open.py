@@ -1,4 +1,6 @@
 import sys
+
+from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QDialog, QListWidget, QVBoxLayout, QPushButton, QFileDialog, QApplication, QLineEdit, QLabel, QComboBox, QHBoxLayout, QSpinBox, QFormLayout
 import pandas as pd
 
@@ -7,20 +9,45 @@ class SheetSelectionDialog(QDialog):
     def __init__(self, sheets, parent=None):
         super(SheetSelectionDialog, self).__init__(parent)
         self.setWindowTitle("Selecione a Planilha")
+        self.setWindowIcon(QIcon(':/svg/Style=outline123123.svg'))
         self.setStyleSheet(parent.styleSheet())
+        self.setStyleSheet("background-color: #F1F2F6;")
         self.layout = QVBoxLayout(self)
 
         self.listWidgetSheets = QListWidget(self)
+        self.listWidgetSheets.setStyleSheet("background-color: #FFFFFF;font-family: 'Poppins';font-size: 12px;")
         for sheet in sheets:
             self.listWidgetSheets.addItem(sheet)
         self.layout.addWidget(self.listWidgetSheets)
 
         self.buttonOk = QPushButton("OK", self)
-        self.buttonOk.clicked.connect(self.accept)
-        self.layout.addWidget(self.buttonOk)
+        self.buttonCancel = QPushButton("Cancelar", self)
+        # Set font family for the buttons using stylesheet
+        button_style = """
+                QPushButton {
+                    font-family: 'Poppins';
+                    font-size: 12px;
+                    background-color: #878672;
+                    border-radius: 4px;
+                    padding: 6px 5px;
+                }
+                QPushButton:hover {
+                    font-family: 'Poppins';
+                    font-size: 12px;
+                    background-color: #16271C;
+                    color: white;
+                    border-radius: 4px;
+                    padding: 6px 5px;
+                }
+                """
 
-        self.buttonCancel = QPushButton("Cancel", self)
+        self.buttonOk.setStyleSheet(button_style)
+        self.buttonCancel.setStyleSheet(button_style)
+
+        self.buttonOk.clicked.connect(self.accept)
         self.buttonCancel.clicked.connect(self.reject)
+
+        self.layout.addWidget(self.buttonOk)
         self.layout.addWidget(self.buttonCancel)
 
     def getSelectedSheet(self):
@@ -32,7 +59,7 @@ class SheetSelectionDialog(QDialog):
     @staticmethod
     def openFileDialog(parent=None):
         options = QFileDialog.Options()
-        filePath, _ = QFileDialog.getOpenFileName(parent, "Abrir arquivo de cubagem", "",
+        filePath, _ = QFileDialog.getOpenFileName(parent, "Abrir Arquivo", "",
                                                   "Arquivos excel (*.xlsx);;All Files (*)", options=options)
         if filePath:
             return filePath
@@ -88,6 +115,7 @@ class HeaderSelectionDialog(QDialog):
     def __init__(self, headers, header_names, parent=None):
         super(HeaderSelectionDialog, self).__init__(parent)
         self.setWindowTitle("Selecione as Colunas")
+        self.setWindowIcon(QIcon(':/svg/Style=outline123123.svg'))
         self.layout = QVBoxLayout(self)
 
         self.formLayout = QFormLayout()
@@ -102,11 +130,33 @@ class HeaderSelectionDialog(QDialog):
         self.layout.addLayout(self.formLayout)
 
         self.buttonOk = QPushButton("OK", self)
-        self.buttonOk.clicked.connect(self.accept)
-        self.layout.addWidget(self.buttonOk)
+        self.buttonCancel = QPushButton("Cancelar", self)
+        # Set font family for the buttons using stylesheet
+        button_style = """
+                        QPushButton {
+                            font-family: 'Poppins';
+                            font-size: 12px;
+                            background-color: #878672;
+                            border-radius: 4px;
+                            padding: 6px 5px;
+                        }
+                        QPushButton:hover {
+                            font-family: 'Poppins';
+                            font-size: 12px;
+                            background-color: #16271C;
+                            color: white;
+                            border-radius: 4px;
+                            padding: 6px 5px;
+                        }
+                        """
 
-        self.buttonCancel = QPushButton("Cancel", self)
+        self.buttonOk.setStyleSheet(button_style)
+        self.buttonCancel.setStyleSheet(button_style)
+
+        self.buttonOk.clicked.connect(self.accept)
         self.buttonCancel.clicked.connect(self.reject)
+
+        self.layout.addWidget(self.buttonOk)
         self.layout.addWidget(self.buttonCancel)
 
         self.setLayout(self.layout)

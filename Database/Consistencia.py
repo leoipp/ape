@@ -1,5 +1,6 @@
 import sqlite3
 import pandas as pd
+import statistics
 
 
 class Consist:
@@ -9,6 +10,37 @@ class Consist:
 
     def connect(self):
         return sqlite3.connect(self.db)
+
+    def vacuum_database(self):
+        """
+        Perform a VACUUM operation on the SQLite database.
+
+        The VACUUM command rebuilds the database file, compacts it, and reclaims unused space.
+        This operation can significantly reduce the size of the database file, particularly
+        if a large amount of data has been deleted. It also helps to defragment the database,
+        potentially improving query performance.
+
+        The VACUUM operation locks the entire database, so it is recommended to run this
+        function during a maintenance window when the database is not heavily used.
+
+        Raises:
+        -------
+        sqlite3.Error
+            If an error occurs during the VACUUM operation, it will be caught and displayed.
+
+        Example:
+        --------
+        db_manager = DatabaseManager('your_database.db')
+        db_manager.vacuum_database()
+        """
+        try:
+            with self.connect() as conn:
+                cur = conn.cursor()
+                cur.execute("VACUUM")
+                conn.commit()
+                print("Database vacuumed successfully.")
+        except sqlite3.Error as e:
+            print(f"An error occurred during the VACUUM operation: {e}")
 
     def list_tables(self):
         """
@@ -35,6 +67,38 @@ class Consist:
         # The connection is automatically closed when leaving the 'with' block
         return tables
 
+    def fetch_row_by_rowid(self, table_name, rowid):
+        """
+        Fetch the values of a row from a table based on the rowid.
+
+        :param table_name: The name of the table to fetch the row from.
+        :param rowid: The rowid of the row to fetch.
+        :return: A dictionary with column names as keys and the corresponding row values as values.
+        """
+        try:
+            with self.connect() as conn:
+                cursor = conn.cursor()
+
+                # Fetch column names
+                cursor.execute(f"PRAGMA table_info({table_name});")
+                columns = [column[1] for column in cursor.fetchall()]
+
+                # Fetch the row based on the rowid
+                cursor.execute(f"SELECT * FROM {table_name} WHERE rowid = ?", (rowid,))
+                row_values = cursor.fetchone()
+
+                if row_values:
+                    # Create a dictionary of column names and row values
+                    result = dict(zip(columns, row_values))
+                    return result
+                else:
+                    print(f"No row found with rowid {rowid} in table '{table_name}'.")
+                    return None
+
+        except sqlite3.Error as e:
+            print(f"An error occurred while fetching the row: {e}")
+            return None
+
     def add_column(self, table_name, column_name, data_type="FLOAT"):
         """
         Ensures the specified column exists in the table; creates it if not.
@@ -56,6 +120,65 @@ class Consist:
                     ALTER TABLE {table_name}
                     ADD COLUMN {column_name} {data_type}
                 """)
+
+    def regional_resumo(self, table_name, regime, other, n, coluna="Area"):
+        with self.connect() as conn:
+            cur = conn.cursor()
+            cur.execute(
+                f"""
+                SELECT {coluna}
+                FROM {table_name}
+                WHERE ManejoAPEX_Final = '{regime}' AND SUBSTR(Talhao, {n}, 2) = '{other}'
+                """
+            )
+            r = cur.fetchall()
+            r = [a[0] for a in r if a[0] is not None]
+            sum_r = round(sum(r))
+            return sum_r
+
+    def regional_resumo_av(self, table_name, regime, other, n, coluna="Area", soma='True'):
+        with self.connect() as conn:
+            cur = conn.cursor()
+            cur.execute(
+                f"""
+                SELECT {coluna}
+                FROM {table_name}
+                WHERE ManejoAPEX_Final = '{regime}' AND SUBSTR(Talhao, {n}, 2) = '{other}'
+                """
+            )
+            r = cur.fetchall()
+            r = [a[0] for a in r if a[0] is not None]
+            if soma == 'True':
+                sum_r = round(sum(r))
+                return sum_r
+            else:
+                try:
+                    mean_r = round(sum(r)/len(r))
+                except Exception:
+                    mean_r = 0
+                print(mean_r)
+                return mean_r
+
+    def fetch_all_data(self, table_name):
+        """
+        Fetch all rows from the specified table.
+
+        :param table_name: The name of the table to fetch data from.
+        :return: A DataFrame containing all rows from the table.
+        """
+        with self.connect() as conn:
+            cur = conn.cursor()
+            query = f"SELECT * FROM {table_name}"
+            cur.execute(query)
+            rows = cur.fetchall()
+
+            # Get column names
+            columns = [desc[0] for desc in cur.description]
+
+            # Convert to DataFrame
+            df = pd.DataFrame(rows, columns=columns)
+
+        return df
 
     def update_table(self, table_name: str, col_calc: dict):
         """
@@ -160,7 +283,8 @@ class Consist:
     @staticmethod
     def update_table_with_values(conn, target_table, source_table, source_columns, join_column, target_columns):
         """
-        Updates the target table with values from the source table based on a join column.
+        Updates the target table with values from the source table based on a join column,
+        only if the current value in the target table is NULL.
 
         :param conn: The active SQLite connection to use.
         :param target_table: The name of the target table to update.
@@ -172,7 +296,7 @@ class Consist:
         cur = conn.cursor()
 
         update_clauses = [
-            f"{target_col} = COALESCE({source_table}.{source_col}, {target_table}.{target_col})"
+            f"{target_col} = CASE WHEN {target_table}.{target_col} IS NULL THEN {source_table}.{source_col} ELSE {target_table}.{target_col} END"
             for target_col, source_col in zip(target_columns, source_columns)
         ]
         update_clause = ", ".join(update_clauses)
@@ -353,10 +477,14 @@ class Consist:
         """)
 
         cur.execute("""
-            UPDATE apex_base_1
-            SET IdadeClasse = ROUND(Idade / 2) * 2 + 1
-            WHERE Idade IS NOT NULL
-        """)
+                UPDATE apex_base_1
+                SET IdadeClasse = CASE
+                    WHEN Idade - FLOOR(Idade) < 0.25 THEN FLOOR(Idade)
+                    WHEN Idade - FLOOR(Idade) >= 0.25 AND Idade - FLOOR(Idade) < 0.75 THEN FLOOR(Idade) + 0.5
+                    ELSE FLOOR(Idade) + 1
+                END
+                WHERE Idade IS NOT NULL
+            """)
 
     def ajuste_base(self):
         """
@@ -465,6 +593,84 @@ class Consist:
         :return: A list of headers corresponding to the columns selected.
         """
         return [description[0] for description in cur.description]
+
+    def save_changes_to_database(self, table_name, row_data, primary_key_column, table_widget):
+        """
+        Save the changes for a single row to the database.
+
+        :param table_name: The name of the table in the database.
+        :param row_data: A list containing the new row data, including the primary key as the last item.
+        :param primary_key_column: The name of the primary key column in the table.
+        :param table_widget: The QTableWidget containing the data.
+        """
+        # Extract the primary key value (last item in row_data)
+        row_data = row_data[:-1]
+        primary_key_value = row_data[0]
+        row_data = row_data[1:]  # Exclude the primary key from the data to be updated
+
+        # Get column names from the table widget
+        headers = [table_widget.horizontalHeaderItem(i).text() for i in range(table_widget.columnCount())]
+
+        # Exclude the primary key column from the column names
+        column_names = headers[1:] if headers[0] == primary_key_column else headers
+
+        # Build the SET clause of the SQL UPDATE query dynamically
+        set_clause = ", ".join([f"{col} = ?" for col in column_names])
+
+        # Prepare the SQL UPDATE query
+        update_query = f"""
+            UPDATE {table_name}
+            SET {set_clause}
+            WHERE {primary_key_column} = ?
+        """
+
+        # Execute the query with the data
+        with self.connect() as conn:
+            cur = conn.cursor()
+            try:
+                cur.execute(update_query, (*row_data, primary_key_value))
+                conn.commit()
+                print(f"Row with primary key {primary_key_value} updated successfully.")
+            except sqlite3.Error as e:
+                print(f"SQLite error occurred: {e}")
+
+    def delete_selected_rows(self, table_name, table_widget, primary_key_column):
+        """
+        Delete selected rows from the database and the QTableWidget.
+
+        :param table_name: The name of the table in the database.
+        :param table_widget: The QTableWidget containing the data.
+        :param primary_key_column: The name of the primary key column in the table.
+        """
+        selected_rows = table_widget.selectionModel().selectedRows()
+
+        if not selected_rows:
+            print("No rows selected for deletion.")
+            return
+
+        # Prepare to delete from database
+        primary_keys_to_delete = []
+        for row in selected_rows:
+            primary_key_value = table_widget.item(row.row(), 0).text()  # Assuming primary key is in the first column
+            primary_keys_to_delete.append(primary_key_value)
+
+        # Delete from the database
+        placeholders = ', '.join('?' for _ in primary_keys_to_delete)
+        delete_query = f"DELETE FROM {table_name} WHERE {primary_key_column} IN ({placeholders})"
+
+        with self.connect() as conn:
+            cur = conn.cursor()
+            try:
+                cur.execute(delete_query, primary_keys_to_delete)
+                conn.commit()
+                print(f"Rows with primary keys {primary_keys_to_delete} deleted successfully.")
+            except sqlite3.Error as e:
+                print(f"SQLite error occurred: {e}")
+                return
+
+        # Remove the rows from the table widget
+        for row in sorted(selected_rows, reverse=True):
+            table_widget.removeRow(row.row())
 
     def pipeline(self):
         self.update_table(
@@ -598,4 +804,3 @@ class Consist:
         self.create_and_populate_final_table()
         self.create_final_table_2()
         return self.ajuste_base()
-
